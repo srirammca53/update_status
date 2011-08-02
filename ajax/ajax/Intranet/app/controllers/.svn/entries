@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3024"
+   name=""
+   committed-date="2006-08-14T01:31:02.092173Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/app/controllers"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="3028"
+   name="plans_controller.rb"
+   text-time="2006-08-14T19:08:06.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="5469e2ee5d7bbc2de537fdd39e5b49f6"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+<entry
+   committed-rev="3029"
+   name="contacts_controller.rb"
+   text-time="2006-08-14T19:06:51.000000Z"
+   committed-date="2006-08-14T19:24:08.778286Z"
+   checksum="bf972e1fa1589e79a610ad41e2ca92d3"
+   last-author="scottr"
+   kind="file"
+   revision="3029"/>
+<entry
+   committed-rev="3030"
+   name="application.rb"
+   text-time="2006-08-14T19:37:17.000000Z"
+   committed-date="2006-08-14T20:11:43.537955Z"
+   checksum="4f64be9765246efffeeaa8f3148a2369"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"
+   revision="3030"/>
+<entry
+   committed-rev="3028"
+   name="users_controller.rb"
+   text-time="2006-08-14T16:23:49.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="33e2a6a0a73c9e23142c434c1ce6b3a1"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+<entry
+   committed-rev="3028"
+   name="documents_controller.rb"
+   text-time="2006-08-14T16:21:56.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="5368d8903560f172fd7f112650525c20"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+<entry
+   committed-rev="3029"
+   name="comments_controller.rb"
+   text-time="2006-08-14T19:06:25.000000Z"
+   committed-date="2006-08-14T19:24:08.778286Z"
+   checksum="74e22b4408cdba7c2115604b58a9b4b1"
+   last-author="scottr"
+   kind="file"
+   revision="3029"/>
+<entry
+   committed-rev="3023"
+   name="sessions_controller.rb"
+   text-time="2006-08-14T00:47:42.000000Z"
+   committed-date="2006-08-14T01:28:16.305963Z"
+   checksum="dbd24cf0a357f0ab9821dd9f2d771b3c"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3029"
+   name="messages_controller.rb"
+   text-time="2006-08-14T19:07:52.000000Z"
+   committed-date="2006-08-14T19:24:08.778286Z"
+   checksum="85c6bd929111dbf0d587ca7121a2cc8f"
+   last-author="scottr"
+   kind="file"
+   revision="3029"/>
+<entry
+   committed-rev="3028"
+   name="posts_controller.rb"
+   text-time="2006-08-14T16:21:30.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="7f3b83051405ae2e1e9d7a829df11224"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+<entry
+   committed-rev="3028"
+   name="projects_controller.rb"
+   text-time="2006-08-14T16:22:36.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="cc78be42965db1d24ab7b7f93e603174"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+</wc-entries>

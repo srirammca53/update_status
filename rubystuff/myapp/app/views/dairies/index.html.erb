@@ -1,0 +1,34 @@
+<h1><font color="white">Listing Details</font></h1>
+<hr/>
+<table>
+  <tr>
+    <th>Name</th>
+    
+    <th>Mobile</th>
+    <th>Address</th>
+    <th>Relation</th>
+    <th>Dob</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dairies.each do |dairy| %>
+  <tr>
+    <td><%= dairy.name %></td>
+    <td><%= dairy.mobile %></td>
+    <td><%= dairy.address %></td>
+    <td><%= dairy.relation %></td>
+    <td><%= dairy.dob %></td>
+    <td><%= dairy.location %></td>
+    <td><%= link_to 'Show', dairy %></td>
+    <td><%= link_to 'Edit', edit_dairy_path(dairy) %></td>
+    <td><%= link_to 'Destroy', dairy, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dairy', new_dairy_path %>

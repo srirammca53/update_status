@@ -1,0 +1,2 @@
+module DairiesHelper
+end

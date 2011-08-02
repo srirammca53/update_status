@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3023"
+   name=""
+   committed-date="2006-08-14T01:28:16.305963Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/config"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="3023"
+   name="routes.rb"
+   text-time="2006-08-13T19:06:13.000000Z"
+   committed-date="2006-08-14T01:28:16.305963Z"
+   checksum="c4b617d1ba52c94980f12b37822ea166"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2983"
+   name="database.yml"
+   text-time="2006-06-15T16:55:13.000000Z"
+   committed-date="2006-06-15T20:00:36.827897Z"
+   checksum="1dd99bb2382f52daec669a95da065cfd"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2983"
+   name="boot.rb"
+   text-time="2006-06-15T16:51:18.000000Z"
+   committed-date="2006-06-15T20:00:36.827897Z"
+   checksum="051f2b77c29b10f8b2e06a7dfd26ab07"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="3019"
+   name="environment.rb"
+   text-time="2006-08-14T15:58:28.000000Z"
+   committed-date="2006-08-11T18:13:01.155125Z"
+   checksum="0d1adb7364d68d33a2be546dbab08dee"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   name="environments"
+   kind="dir"/>
+</wc-entries>

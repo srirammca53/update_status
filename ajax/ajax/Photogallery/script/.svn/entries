@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/script"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   name="performance"
+   kind="dir"/>
+<entry
+   committed-rev="3039"
+   name="console"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="e9da4d9bd98b629d856b280caa927f42"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   committed-rev="3039"
+   name="breakpointer"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="efe05546991854cb1323026c0cdc7d27"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   committed-rev="3039"
+   name="server"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="bba2905059daec6033f7a51cff19aff6"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   committed-rev="3039"
+   name="destroy"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="f09bb329fb28e89340567a704a4619f8"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   committed-rev="3039"
+   name="runner"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="78522a2f43ce4bf932cf237076c0d2a1"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   committed-rev="3039"
+   name="about"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="e8f2a1c34090a8be9dd2a635a6c51d9e"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   committed-rev="3039"
+   name="generate"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="ef69c53ee39f550f43a4bd3a09482ff7"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   name="process"
+   kind="dir"/>
+<entry
+   committed-rev="3039"
+   name="plugin"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="4c5aa44730cde119ab839486212f4ac5"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+</wc-entries>

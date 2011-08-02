@@ -1,0 +1,73 @@
+<%= form_for(@register, :html => {:multipart => true}) do |f| %>
+  
+<% if @register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@register.errors.count, "error") %> prohibited this dairy from being saved:</h2>
+
+      <ul>
+      <% @register.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div><br>
+
+<div>
+ <%= f.label(:gender, "gender") %>
+<%= f.radio_button(:gender, "male") %>
+<%= f.label(:gender, "male") %>
+<%= f.radio_button(:gender, "female") %>
+<%= f.label(:gender, "female") %>
+</div><br>
+ <div>
+    <%= f.label :birthday %>
+    <%= f.text_field :birthday %>
+  </div><br>
+<div>
+   <%= f.label :country %>
+
+    <%= f.select "country", options_for_select([ "India", "Australia","America","England","Singapore","France","others"], "select country") %>
+  </div>
+<br>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div><br>
+
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div><br>
+ 
+ <div>
+   <%= f.label :security %>
+    <%= f.select "security", options_for_select(
+[ "pet name?", " Favourate Fruit","Best friend name"], "select Question") %>
+  </div><br>
+
+ <div>
+    <%= f.label :answer %>
+    <%= f.text_field :answer %>
+  </div><br><br>
+<div>
+<%= f.label(:accept, "accept") %>
+<%= f.check_box(:accept) %>
+</div>
+<br>
+
+<div>
+<p>Upload File </p>
+<%= f.label :picture %><br />
+<%= f.file_field :picture %> 
+
+</div>
+<br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<%= form_for(@office) do |f| %>
+   <div>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+ 
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

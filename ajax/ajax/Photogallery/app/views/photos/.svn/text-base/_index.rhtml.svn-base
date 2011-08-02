@@ -1,0 +1,17 @@
+<% if @album.photos.any? %>
+	<ul>
+		<% @album.photos.each do |photo| %>
+			<li id="<%= photo.id %>">
+				<%= link_to_function image_tag(thumb_photo_url(:album_id => @album, :id => photo), :class => "thumb", :alt => ""), "Photo.show('#{medium_photo_url(:album_id => @album, :id => photo)}')", :class => "show" %><br/>
+				<% if logged_in? %>
+					<%= link_to_function photo.name, "Element.toggle('#{photo.id}_name_link','#{photo.id}_edit', '#{photo.id}_delete')", :class => "rollover", :id => "#{photo.id}_name_link" %> <%= link_to_remote image_tag("delete", :class => 'icon', :id => "#{photo.id}_delete"), :url => photo_url(:album_id => @album, :id => photo), :method => :delete %>
+					<% remote_form_for :photo, photo, :url => photo_url(:album_id => @album, :id => photo), :html => { :style => "display: none", :method => :put, :id => "#{photo.id}_edit" }, :update => "#{photo.id}_name_link", :before => "$('#{photo.id}_name_link').update('Saving...'); Element.toggle('#{photo.id}_name_link','#{photo.id}_edit','#{photo.id}_delete')" do |f| %>
+						<%= f.text_field :name %>
+					<% end %>
+				<% else %>
+					<%= photo.name %>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>

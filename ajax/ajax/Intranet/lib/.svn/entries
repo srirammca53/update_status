@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3023"
+   name=""
+   committed-date="2006-08-14T01:28:16.305963Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/lib"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="3023"
+   name="authentication.rb"
+   text-time="2006-08-13T02:24:22.000000Z"
+   committed-date="2006-08-14T01:28:16.305963Z"
+   checksum="19a036518ea74c3ed626178dc0eb99da"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   name="tasks"
+   kind="dir"/>
+<entry
+   committed-rev="3028"
+   name="labelling_form_helper.rb"
+   text-time="2006-08-14T15:26:06.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="9983f1aaeb58189b897c719802e477e0"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+</wc-entries>

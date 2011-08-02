@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3023"
+   name=""
+   committed-date="2006-08-14T01:28:16.305963Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/app/views/sessions"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="3027"
+   name="new.rhtml"
+   text-time="2006-08-14T01:48:54.000000Z"
+   committed-date="2006-08-14T04:56:47.077254Z"
+   checksum="ca96f195a726a5c5a71a6a53b8709ad5"
+   last-author="scottr"
+   kind="file"
+   revision="3027"/>
+</wc-entries>

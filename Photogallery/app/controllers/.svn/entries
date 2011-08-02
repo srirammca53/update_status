@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/app/controllers"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   committed-rev="3048"
+   name="photos_controller.rb"
+   text-time="2006-08-19T21:27:21.000000Z"
+   committed-date="2006-08-19T23:09:57.356791Z"
+   checksum="f75c1f28b4f5f742236afdcc36fc8687"
+   last-author="scottr"
+   kind="file"
+   revision="3048"/>
+<entry
+   committed-rev="3047"
+   name="application.rb"
+   text-time="2006-08-19T20:25:08.000000Z"
+   committed-date="2006-08-19T20:51:00.358620Z"
+   checksum="e3789576bc58b374dc96e44b263a83ca"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:00.000000Z"
+   revision="3047"/>
+<entry
+   committed-rev="3046"
+   name="albums_controller.rb"
+   text-time="2006-08-19T15:24:04.000000Z"
+   committed-date="2006-08-19T20:16:17.867338Z"
+   checksum="7960125a6319c9d9eea8850ce38d6660"
+   last-author="scottr"
+   kind="file"
+   revision="3046"/>
+<entry
+   committed-rev="3047"
+   name="sessions_controller.rb"
+   text-time="2006-08-19T20:22:56.000000Z"
+   committed-date="2006-08-19T20:51:00.358620Z"
+   checksum="b50e5b322057cd7ed5fd6a7f15dc7b71"
+   last-author="scottr"
+   kind="file"
+   revision="3047"/>
+</wc-entries>

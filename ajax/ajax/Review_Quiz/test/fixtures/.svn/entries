@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3031"
+   name=""
+   committed-date="2006-08-15T02:32:39.029882Z"
+   url="http://redgreenblu.com/svn/work/quiz/test/fixtures"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3033"/>
+<entry
+   committed-rev="3034"
+   name="questions.yml"
+   text-time="2006-08-15T02:46:57.000000Z"
+   committed-date="2006-08-15T07:09:26.718116Z"
+   checksum="ed2fd6f8dfcd29af635c13d69dd81d7e"
+   last-author="scottr"
+   kind="file"
+   revision="3034"/>
+<entry
+   committed-rev="3034"
+   name="quizzes.yml"
+   text-time="2006-08-15T02:46:52.000000Z"
+   committed-date="2006-08-15T07:09:26.718116Z"
+   checksum="ed2fd6f8dfcd29af635c13d69dd81d7e"
+   last-author="scottr"
+   kind="file"
+   revision="3034"/>
+</wc-entries>

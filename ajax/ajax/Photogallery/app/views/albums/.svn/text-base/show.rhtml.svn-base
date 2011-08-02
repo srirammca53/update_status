@@ -1,0 +1,22 @@
+<h2 id="name"><%= @album.name %></h2>
+
+<% if logged_in? %>
+	<div id="rename" style="display: none">
+		<%= javascript_tag "$('name').addClassName('rollover')" %>
+		<%= javascript_tag "$('name').onclick=function(){Element.toggle(\"name\",\"rename\")}" %>
+		<% remote_form_for :album, @album, :url => album_url, :html => { :method => :put }, :update => 'name', :before => "$('name').update('Saving...'); Element.toggle('name','rename')" do |f| %>
+			<%= f.text_field :name %> <%= link_to_function "Cancel", "Element.toggle('name','rename')" %>
+		<% end %>
+	</div>
+	<div id="upload_container">
+		<% form_for :photo, Photo.new, :url => photos_url(:album_id => @album), :html => { :multipart => true, :target => "uploader", :id => "photo_upload" } do |f| %>
+			<label for="photo_file"><%= image_tag "add", :class => 'icon' %> Add a photo:</label> <%= f.file_field :file, :onchange => "Photo.upload();" %>
+		<% end %>
+		<div id="loading" style="display: none">Uploading...</div>
+		<iframe src="/404.html" id="uploader" name="uploader" style="width:0px; height:0px; border: 0px"></iframe>
+	</div>
+<% end %>
+
+<div id="photos"><%= render :partial => "photos/index" %></div>
+
+<%= render :partial => "photos/show" %>

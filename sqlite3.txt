@@ -1,0 +1,86 @@
+Sqlite:
+is an ACID-compliant embedded relational database management system contained in a relatively small
+C programming library.The source code for SQLite is in the public domain and implements most of the
+SQL standard.
+
+
+Sqlite Advantages:
+   1. Speed
+    • In many cases at least 2-3 times faster then MySQL/PostgreSQL.
+    • Fast PHP interface.
+   2.Functionality
+    • Sub-selects, Triggers, Transactions, Views.
+    • Up to 2TB of data storage.
+    • Small memory footprint.
+    • Self-contained: no external dependencies.
+    • Atomic commit and rollback protect data integrity.
+    • Easily movable database.
+   3. Security
+    • Each user has their own completely independent database(s).
+
+
+Sqlite Disadvantages:
+   1. It's Slow
+     • Locks whole file for writing.
+   2. Limited
+     • Database size restricted to 2GB in most cases.
+     • Not very scalable.
+
+SQL Features That SQLite Does Not Implement
+
+1.RIGHT and FULL OUTER JOIN
+
+2.Complete ALTER TABLE support
+
+3.Complete trigger support
+
+4.Writing to VIEWs
+
+5.GRANT and REVOKE
+
+
+Installing Sqlite on ubuntu:
+
+sudo apt-get install SQLite3 
+
+
+SQLite database.
+
+$ sqlite3 <database name>.db 
+
+example :
+$ sqlite3 mydatabase.db
+
+If you already have a database file called which you entered then you can select and access 
+that database with the same command.If the database file does not exist this command will 
+create it.
+After creating the database we need to create tables and insert the data in to that tables:
+
+Creating tables in sqlite:
+
+create table <table_name> (field1 datatype , field2 datatype.....); 
+
+example:
+CREATE TABLE college(student_id integer primary key,student_name text,student_info text);
+
+
+In sqlite the constraints are
+NOT NULL
+DEFAULT,
+PRIMARY KEY AND FOREIGN KEY
+CHECK,
+UNIQUE
+
+We can use these constraints while creating tables.so if you are not clear with these constraints? then go with this link
+http://zetcode.com/databases/sqlitetutorial/constraints/ 
+
+So after creating tables we have to insert data in to the table.
+
+Inserting data in to the tables:
+The queries syntax are same as mysql 
+insert into table_name (field1,feild2,....) values(value1,value2,....);
+
+example :
+insert into college(student_id,student_name,student_info) values(1,'ram','10th class,age 16 years');
+
+

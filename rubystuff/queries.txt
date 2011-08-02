@@ -1,0 +1,167 @@
+Database : employee,
+tables :
+1. emp
+emp_id      emp_name  
+----------  ----------
+1           sriram    
+2           Ganesh    
+3           Srinivas  
+4           rajkumar  
+sqlite>
+
+2.emp_login
+id          emp_login   emp_logoff  date        e_id        leave_type  leave_date
+----------  ----------  ----------  ----------  ----------  ----------  ----------
+1           08:00:00    08:02:00    2011-06-01  1           no leave              
+2           08:00:00    08:20:00    2011-06-01  2           no leave              
+3           08:00:00    06:00:00    2011-06-01  3           no leave              
+4           08:00:00    06:00:00    2011-06-01  4           no leave              
+1                                   2011-06-02  1           sick leave  2011-06-02
+2           08:09:00    06:00:00    2011-06-02  2           no leave              
+3           08:09:00    08:20:00    2011-06-02  3           no leave              
+4                       08:20:00    2011-06-02  3           no leave     2011-06-0
+1           08:00:00    06:00:00    2011-06-03  1           no leave              
+2                                   2011-06-03  2           sick leave  2011-06-03
+3                                   2011-06-03  3           sick leave  2011-06-03
+4           08:00:00    08:01:00    2011-06-03  4                                 
+1           08:00:00    08:01:00    2011-06-04  1                                 
+2                                   2011-06-04  2           sick leave  2011-06-05
+3           08:00:00    06:00:00    2011-06-04  3                                 
+4           08:00:00    08:01:00    2011-06-04  4                                 
+1                                   2011-06-05  1           no leave    2011-06-05
+2           08:00:00    06:00:00    2011-06-05  2                                 
+3           08:00:00    06:00:00    2011-06-05  3           no leave              
+4                                   2011-06-05  4           no leave    2011-06-05
+ 
+
+3.emp_permission
+id          permission_time  date        p_id      
+----------  ---------------  ----------  ----------
+1           yes              2011-06-01  1         
+2           no               2011-06-01  2         
+3           no               2011-06-01  3         
+4           no               2011-06-01  4         
+1           yes              2011-06-02  1         
+2           yes              2011-06-02  2         
+3           no               2011-06-02  3         
+4           yes              2011-06-02  4  
+
+
+
+
+
+1). List of days that employee is on leave for a given specific time interval
+
+qlite> select distinct date,emp_name,emp_id from emp_login,emp where leave_date<"0000-00-00" and date between "2011-06-01" and "2011-06-05" and emp.emp_id=1 and emp_login.e_id=1;
+date        emp_name    emp_id    
+----------  ----------  ----------
+2011-06-01  sriram      1         
+2011-06-03  sriram      1         
+2011-06-04  sriram      1         
+sqlite> 
+
+
+
+
+2). List of days that the employee was late. i.e signin time is more than 8:05 a.m
+
+select emp_name,date,emp_login.emp_login from emp,emp_login where emp_login.emp_login > "08:05:00" and emp_name="rajkumar";
+emp_name    date        emp_login 
+----------  ----------  ----------
+rajkumar    2011-06-02  08:09:00  
+rajkumar    2011-06-02  08:09:00  
+
+
+sqlite> select date from emp_login where e_id=2 and emp_login > "08:05:00";
+date      
+----------
+2011-06-02
+sqlite> 
+
+
+3). List of permissions that was employee was taken in a specific date interval.
+
+ 
+sqlite> select date,emp_id from emp_permission,emp where permission_time="yes" and p_id=1 and emp.emp_name="sriram"; 
+date        emp_id    
+----------  ----------
+2011-06-01  1         
+2011-06-02  1         
+sqlite> 
+
+
+
+
+4).List of all employees that were signed out after 8:00p.m in a specific date interval. 
+
+sqlite> select date,emp_logoff,e_id,emp_name from emp_login,emp where emp_logoff>"08:00:00" and emp.emp_id=emp_login.e_id;
+date        emp_logoff  e_id        emp_name  
+----------  ----------  ----------  ----------
+2011-06-01  08:02:00    1           sriram    
+2011-06-01  08:20:00    2           Ganesh    
+2011-06-02  08:20:00    3           Srinivas  
+2011-06-02  08:20:00    3           Srinivas  
+2011-06-03  08:01:00    4           rajkumar  
+2011-06-04  08:01:00    1           sriram    
+2011-06-04  08:01:00    4           rajkumar  
+sqlite> 
+
+
+5). List of all employee that were late in a specific date.
+
+qlite> select distinct emp_name,emp_id,date from emp,emp_login where emp_login>"08:05:00" and emp_login.date="2011-06-02";
+emp_name    emp_id      date      
+----------  ----------  ----------
+Ganesh      2           2011-06-02
+Srinivas    3           2011-06-02
+rajkumar    4           2011-06-02
+sriram      1           2011-06-02
+sqlite> 
+
+6). List of days that the employee was on sick leave for a specific date interval.
+
+sqlite> select leave_date from emp_login where leave_date>"0000-00-00" and e_id=2;
+leave_date 
+-----------
+2011-06-03 
+2011-06-05 
+sqlite> 
+
+
+7). Sql query to display no of working days, no of leaves, no of permissions for al the employees to the till date. 
+
+
+sqlite> select distinct emp_name,emp_login,permission_time,emp_login.date,emp_login.leave_date from emp,emp_login,emp_permission where emp.emp_id = emp_login.e_id and emp.emp_id=emp_permission.p_id and emp_permission.p_id=emp_login.e_id;
+emp_name    emp_login   permission_time  date        leave_date 
+----------  ----------  ---------------  ----------  -----------
+Ganesh                  no               2011-06-03  2011-06-03 
+Ganesh                  no               2011-06-04  2011-06-05 
+Ganesh                  yes              2011-06-03  2011-06-03 
+Ganesh                  yes              2011-06-04  2011-06-05 
+Ganesh      08:00:00    no               2011-06-01             
+Ganesh      08:00:00    no               2011-06-05             
+Ganesh      08:00:00    yes              2011-06-01             
+Ganesh      08:00:00    yes              2011-06-05             
+Ganesh      08:09:00    no               2011-06-02             
+Ganesh      08:09:00    yes              2011-06-02             
+Srinivas                no               2011-06-02   2011-06-02
+Srinivas                no               2011-06-03  2011-06-03 
+Srinivas    08:00:00    no               2011-06-01             
+Srinivas    08:00:00    no               2011-06-04             
+Srinivas    08:00:00    no               2011-06-05             
+Srinivas    08:09:00    no               2011-06-02             
+rajkumar                no               2011-06-05  2011-06-05 
+rajkumar                yes              2011-06-05  2011-06-05 
+rajkumar    08:00:00    no               2011-06-01             
+rajkumar    08:00:00    no               2011-06-03             
+rajkumar    08:00:00    no               2011-06-04             
+rajkumar    08:00:00    yes              2011-06-01             
+rajkumar    08:00:00    yes              2011-06-03             
+rajkumar    08:00:00    yes              2011-06-04             
+sriram                  yes              2011-06-02  2011-06-02 
+sriram                  yes              2011-06-05  2011-06-05 
+sriram      08:00:00    yes              2011-06-01             
+sriram      08:00:00    yes              2011-06-03             
+sriram      08:00:00    yes              2011-06-04             
+sqlite> 
+

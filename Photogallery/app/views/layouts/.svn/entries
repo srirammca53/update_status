@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/app/views/layouts"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   committed-rev="3042"
+   name="plain.rhtml"
+   text-time="2006-08-18T05:05:38.000000Z"
+   committed-date="2006-08-18T05:19:50.962521Z"
+   checksum="c116a52f75ce0411f0b7050d5afee4cc"
+   last-author="scottr"
+   kind="file"
+   revision="3042"/>
+<entry
+   committed-rev="3046"
+   name="application.rhtml"
+   text-time="2006-08-19T15:15:12.000000Z"
+   committed-date="2006-08-19T20:16:17.867338Z"
+   checksum="922ab43784faf760dcbf5d90dbdbdc4a"
+   last-author="scottr"
+   kind="file"
+   revision="3046"/>
+</wc-entries>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2863"
+   name=""
+   committed-date="2006-02-01T22:37:30.297713Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/public/images"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="2863"
+   name="default_user.jpg"
+   text-time="2005-03-01T23:26:30.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="2b0397d6a672161d580503d3e49cc7be"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="icon_DOC_big.gif"
+   text-time="2005-03-20T03:57:42.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="10d17c79735babbd0a3e53a089bc2680"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="3030"
+   name="spinner.gif"
+   text-time="2006-08-14T18:45:31.000000Z"
+   committed-date="2006-08-14T20:11:43.537955Z"
+   checksum="c464b90be2db0466fe2d7454ec28a06c"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-14T20:11:34.000000Z"
+   revision="3030"/>
+<entry
+   committed-rev="2863"
+   name="icon_PSD_big.gif"
+   text-time="2005-03-20T03:57:52.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="6d4c8c3aa6f5ce5488bcdeefb4d478b6"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="icon_XLS_big.gif"
+   text-time="2005-03-20T03:57:35.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="57741231b317e3e612516604f71cc3aa"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="logo.gif"
+   text-time="2005-03-21T06:41:29.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="e11f16a3e7273150624a5c87a2e1a4b6"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="icon_AI_big.gif"
+   text-time="2005-03-20T03:57:54.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="063b5141da81bffcbd36af4f71535643"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="icon_PDF_big.gif"
+   text-time="2005-03-20T03:57:37.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="20b8a9fc42c21ddf79477d290da18c8f"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="logo-demo.gif"
+   text-time="2005-04-21T01:36:08.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="0e744536375389d28d2baece216918c1"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="icon_Generic_big.gif"
+   text-time="2005-03-20T03:57:45.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="c8a4282276a679d36566455d8f547cfc"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="progress_bar.gif"
+   text-time="2005-03-24T21:52:00.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="52f4d31d5015a67ba7e97dbb8c6c6ab4"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:18.000000Z"/>
+<entry
+   committed-rev="2855"
+   name="rails.png"
+   text-time="2006-02-01T22:20:40.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="450fc241fab7867e96536903244087f4"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2863"
+   name="icon_JPG_big.gif"
+   text-time="2005-03-20T03:57:40.000000Z"
+   committed-date="2006-02-01T22:37:30.297713Z"
+   checksum="e2ecfa1c7d9a90ce7a372e6147e23ad9"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:37:17.000000Z"/>
+</wc-entries>

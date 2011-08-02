@@ -1,0 +1,26 @@
+<h1>Listing Files</h1>
+<%#= link_to "home index", "home/index" %>
+<table>
+  <tr>
+    <th>Filename</th>
+   
+ 
+    
+   
+  </tr>
+
+<% @uploads.each do |upload| %>
+  <tr>
+    <td width="300px"><%= upload.folder.url %></td>
+  
+   
+    <td width="300px"><%= link_to 'Show', upload %></td>
+    
+    <td width="300px"><%= link_to 'Destroy', upload, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New File', new_upload_path %>

@@ -1,0 +1,14 @@
+class Contact < Post
+
+  # Find by first letter of last name
+  def self.letter letter
+    Contact.find :all, :conditions => [ "name like ?", '% '+letter+'%' ]
+  end
+  
+  # Turns "Scott Douglas Raymond" into "Raymond, Scott Douglas"
+  def reversed_name
+    names = name.split
+    "#{names.pop}, #{names.join ' '}"
+  end
+
+end

@@ -1,0 +1,20 @@
+= Gallery
+
+If using MySQL, the 'file' column on the 'photos' table should be set to type 'longblob' to avoid truncated images
+
+Icons from http://www.famfamfam.com/lab/icons/silk/
+
+== Ideas for improvement
+
+photo comments
+photo captions
+pre-cache images upon create
+slider resize
+drag and drop reordering
+delete caches after deleting model
+
+== Todo
+
+next/previous images
+transition effects
+

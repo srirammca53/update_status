@@ -1,0 +1,21 @@
+<p class="notice"><%= notice %></p>
+ 
+<p>
+  <b>commenter:</b>
+  <%= @comment.commenter %>
+</p>
+ 
+<p>
+  <b>body:</b>
+  <%= @comment.body %>
+</p>
+ 
+<p>
+  <b>rating:</b>
+  <%= @comment.rating %>
+</p>
+<p>
+
+ 
+<%= link_to 'Edit comment', edit_comment_path(@comment) %> |
+<%= link_to 'Back to comments', comments_path %> |

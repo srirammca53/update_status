@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @painter.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @painter.age %>
+</p>
+
+<p>
+  <b>Paint cost:</b>
+  <%= @painter.paint_cost %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @painter.points %>
+</p>
+
+
+<%= link_to 'Edit', edit_painter_path(@painter) %> |
+<%= link_to 'Back', painters_path %>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3021"
+   name=""
+   committed-date="2006-08-11T18:59:00.853264Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/vendor/plugins"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   prop-time="2006-08-14T01:34:12.000000Z"
+   revision="3024"/>
+<entry
+   name="assert_valid_markup"
+   kind="dir"/>
+<entry
+   name="acts_as_versioned"
+   kind="dir"
+   deleted="true"/>
+</wc-entries>

@@ -1,0 +1,361 @@
+Mon Jan 13 11:53:55 2003  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* redit.cpp : use SCI_XXXXs instead of obsolete EM_XXXXs.
+
+	* version 0.0.4.3
+
+Sat Jan 11 20:36:32 2003  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* rwclass.cpp : rename rb_f_exit to rw_f_exit.
+
+	* rwclass.cpp : rw_console_f_missing returns self.
+
+	* config.rb : for Ruby 1.6.8
+
+	* version 0.0.4.2
+
+Sat Jul 27 23:05:41 2002  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* redit.cpp : use SCI_XXXX instead of obsolete API EM_XXX of Scintilla.
+
+	* version 0.0.4.1
+
+Sat Jul 27 19:56:50 2002  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* cmbinfo.h : for gcc -mno-cygwin (GCC 3.1) (Thanks to WATANABE Hirofumi)
+
+	* rubyitpr.cpp : ditto.
+
+Sat Jun 29 11:50:47 2002  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* config.rb : stack size should be 0x2000000
+
+	* version 0.0.4.0
+
+Wed May  1 16:17:38 2002  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* core dumped when run irb with readline
+
+Wed May  1 14:49:48 2002  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* attached uconv 0.4.9 and Scintilla 1.45. 
+
+Mon Oct  8 11:49:42 2001  Masaki Suketa  <masaki.suketa@nifty.ne.jp>
+
+	* re-formatting ChangeLog
+
+version 0.0.3.9
+	
+	* enable to make in any directory with VC++. (Thanks to Usaku Nakamura)
+
+version 0.0.3.8
+
+	* split console window.
+	* recent opened files.
+
+version 0.0.3.7
+
+	* DLGBASE::Open(dlgbase.cpp):
+	  use DialogBoxParam instead of DialogBoxIndirectParam.
+	* resource.rc: add DS_SETFONT to dialog style.
+	* TEXTCOLOR(reditprop.h): add default constructor
+	* TEXTCOLOR(reditprop.cpp): ditto.
+
+version 0.0.3.6
+
+	* convert_dirsep(rwcommon.cpp):
+	  using cygwin_conv_to_posix_path (Thanks to Lloyd Zusman)
+	* for VC++ 6.0 (Thanks to arton)
+	* u2s.c: use WIN32 API to convert UNICODE to SJIS
+	* s2u.c: ditto.
+	
+version 0.0.3.5
+
+	* make IRB to work fine with Cygwin Ruby.
+	* emulate $stdout, $stderr, $stdin.
+	
+version 0.0.3.4
+
+	* fix the bug that RubyWin coredump when running script with Ruby/Tk extension.
+	
+version 0.0.3.3
+
+	* refactoring rwclass.cpp. using RUBY_METHOD_FUNC macro. (Thanks to Patrick Cheng)
+	* config.rb: for nkf.c in mswin ruby environment. (Thanks to Patrick Cheng)
+	* syntax colouring.
+	
+version 0.0.3.2
+
+	* include uconv full package.
+	* tag jump only when double clicked on console window.
+	
+version 0.0.3.1
+
+	* rwirb.rb for irb 0.0.7.X and 0.0.6.X
+	
+version 0.0.3.0
+
+	* docwin.cpp : calling UStr_free only when convert succeed.
+	
+version 0.0.2.9
+
+	* judge Japanese code when outputting string.
+	* eval buffer with default fileio code.
+	
+version 0.0.2.8
+
+	* add RubyWin.auto_judge_jcode?
+	* Reading Shift JIS file
+	* Writing Shift JIS file
+	* Reading EUC file
+	* Writing EUC file
+	* Reading JIS file
+	* Writing JIS file
+	* judgement of EOL
+	* add RubyWin::Buffer.default_fileio_code
+	
+version 0.0.2.7
+
+	* emulate gets a little bit more perfectly.
+	
+version 0.0.2.6
+
+	* set DATA file object. (Thanks to WATANABE Hirofumi)
+	
+version 0.0.2.5
+
+	* getlongpath : if path does not include '\\' return path
+	
+version 0.0.2.4
+
+	* install.rb, config.rb (Thanks to WATANABE Hirofumi)
+	* emulate putc
+	* RubyITPR::create_error_msg. memory leak (Thanks to arton)
+	
+version 0.0.2.3
+
+	* rwinit.rb redefine require for rubywin
+	* resource.rc Exit menu item
+	* fix IRB bug.
+	
+version 0.0.2.2
+
+	* config.rb for mswin32
+	
+	version 0.0.2.1
+	* open file specified by command line argument.
+	* context menu.
+	* version dialog.
+	
+version 0.0.2.0
+
+	* config.rb for cross-compile (Thanks to WATANABE Hirofumi)
+	* install.rb
+	* set same background color of all MDI child windows.
+	* toggle view line of all MDI child windows.
+	* add BUF.backColor section.
+	* add BUF.isDisplayLineNumber section.
+	
+version 0.0.1.9 (2000-09-23)
+
+	* REDIT::ConsoleWmChar. not to add "\n".
+	
+version 0.0.1.8 (2000-09-09)
+
+	* RubyITPR::load_protect. add 2nd argument to pass rb_load_protect.
+	* RubyITPR::init. call ruby_init_loadpath to set $LOAD_PATH.
+	
+version 0.0.1.7 (2000-07-19)
+
+	* change 2nd argument of rb_load_protect to 1 from 0.
+	  (remove reset_features)
+	* STYLESETFOR
+	
+version 0.0.1.6
+
+	* add Redo toolbar button.
+	
+version 0.0.1.5
+
+	* add Redo menu item.
+	
+version 0.0.1.4
+
+	* fix setting the save point bug.
+	
+version 0.0.1.3
+
+	* reset the save point when file saved.
+	* fix find next bug.
+	* reset caret position when file opened.
+	
+version 0.0.1.2
+
+	* disable Undo menu when file opened.
+	* reset save point when file opened.
+	
+version 0.0.1.1
+
+	* fix style definition bug of REDIT.
+	* UTF-8 support. (BUT NOT ENOUGH TESTED YET!!!)
+	
+version 0.0.1.0
+
+	* REDIT::GotoLine
+
+version 0.0.0.9
+
+	* Use Scintilla 
+
+version 0.0.0.8
+
+	* open Ruby1 MDI child window when RubyWin start up.
+	* reset $" when run file.
+	* Now, I think RubyWin is almost same as old RubyWin
+	  using MFC, so I decided this version is 0.0.0.8. :-)
+	  (Old RubyWin version is 0.0.0.7.)
+	
+version 0.0.0.3.2
+
+	* delete temporary file when check syntax.
+	* set focus rich edit control when RubyWin is activated.
+	
+version 0.0.0.3.1
+
+	* add Replace Next menu item.
+	
+version 0.0.0.3.0
+
+	* add Find Next menu item.
+	* add Replace... menu item.
+	
+version 0.0.0.2.9
+
+	* for cygwin
+	
+version 0.0.0.2.8
+
+	* change edit control of ARGV dialog to combo box.
+	* for cygwin (Thanks to WATANABE Hirofumi)
+	
+version 0.0.0.2.7
+
+	* add Find... menu item.
+	* add Find... toolbar button.
+	
+version 0.0.0.2.6
+
+	* modify auto indent logic.
+	  I think auto indent become a little more intelligent. I hope so :-)
+	
+version 0.0.0.2.5
+
+	* set focus MDI child window when eval finished.
+	
+version 0.0.0.2.4
+
+	* serialize font information. (read and write rubywin.ini)
+	
+version 0.0.0.2.3
+
+	* add MDI child window icon.
+	* set font of editbox in ARGV dialog from RICHEDIT font.
+	
+version 0.0.0.2.2
+
+	* set font to editbox of ARGV dialog.
+	
+version 0.0.0.2.1
+
+	* Font Dialog
+	
+version 0.0.0.2.0
+
+	* display copyright
+	* add Icon (designed by PiaZ.)
+	
+version 0.0.0.1.9
+
+	* fix the bug when go to line by double click.
+	
+version 0.0.0.1.8
+
+	* add Toolbar
+	* add menuitems: "Tile Vertical", "Tile Horizontal"
+	* autoload rwinit.rb to initialize RubyWin Environment.
+	
+version 0.0.0.1.7
+
+	* Drag & drop
+	
+version 0.0.0.1.6
+
+	* Fix auto indent bug
+	
+version 0.0.0.1.5
+
+	* Auto indent
+	
+version 0.0.0.1.4
+
+	* Jump to line when error line doubleclicked.
+	
+version 0.0.0.1.3
+
+	* add "IRB..." menu item.
+	
+version 0.0.0.1.2
+
+	* set correct ARGV when "Eval Buffer with ARGV".
+	* set focus RICHEDIT control when MDI child window activated.
+	
+version 0.0.0.1.1
+
+	* add "Eval Buffer with ARGV..." menu item.
+	* change "Run XXXX" to "Eval XXXX", otherwise "Run File...".
+	
+version 0.0.0.1.0
+
+	* Accelerator.
+	
+version 0.0.0.0.9
+
+	* Add "Run Buffer..." menu item.
+	* Add "Run Selection" menu item.
+	* Add "Check Syntax" menu item.
+	* Add "Run File..." menu item.
+	
+version 0.0.0.0.8
+
+	* Add "Run Buffer" menu item.
+	* Emulate some of IO class methods.
+	
+version 0.0.0.0.7
+
+	* Add "Undo", "Cut", "Copy", "Paste", "Delete", "Select All"
+	  menu items.
+	
+version 0.0.0.0.6
+
+	* Add "Open", "Save" , "Save As ..." menu items.
+	
+version 0.0.0.0.5
+
+	* add RichEdit Control.
+	
+version 0.0.0.0.4
+
+	* Implementation of MDI interface.
+	
+version 0.0.0.0.3
+
+	* Initialize Ruby interpretor.
+	* Add version information dialog.
+	
+version 0.0.0.0.2
+
+	* Add menu. But selecting menu item, RubyWin does nothing. :-)
+	
+version 0.0.0.0.1
+
+	* Create a simple white window which does nothing. :-)

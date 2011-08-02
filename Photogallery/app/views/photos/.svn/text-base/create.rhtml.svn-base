@@ -1,0 +1,1 @@
+<%= javascript_tag "parent.Photo.finish('#{photos_url(:album_id => @album)}')" %>

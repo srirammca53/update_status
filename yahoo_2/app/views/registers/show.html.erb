@@ -1,0 +1,41 @@
+<center>
+<p id="notice"><%= notice %></p>
+
+<table border=1px>
+<tr>
+  <td>Name:</td>
+  <td><%= @register.name %></td>
+</tr>
+<tr>
+  <td><b>Gender:</b></td>
+  <td><%= @register.gender %></td>
+</tr>
+<tr>
+  <td><b>Birthday:</b></td>
+  <td><%= @register.birthday %></td>
+</tr>
+
+<tr>
+  <td><b>Country:</b>
+  <td><%= @register.country %></td>
+</tr>
+<tr>
+  <td><b> email:</b></td>
+  <td><%= @register.email %></td>
+</tr>
+<tr>
+  <td><b> Password:</b></td>
+  <td><%= @register.password %></td>
+</tr>
+<tr>
+  <td><b> security question:</b></td>
+  <td><%= @register.security %></td>
+</tr>
+<tr>
+  <td><b> Answer :</b></td>
+ <td> <%= @register.answer %></td>
+</tr><br><br>
+</table>
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', registers_path %>
+</center>

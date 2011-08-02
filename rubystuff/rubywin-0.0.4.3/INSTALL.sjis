@@ -1,0 +1,18 @@
+日本語
+コンパイル方法
+
++ Mingw32-GCC (CRTDLL版）の場合
+(1) ruby config.rb
+(2) make
+(3) make install
+
++ Cygwin の場合
+(1) ruby config.rb
+(2) make
+(3) make install
+
++ Visual C++ 6.0 の場合
+(1) ruby config.rb
+(2) nmake
+(3) nmake install
+

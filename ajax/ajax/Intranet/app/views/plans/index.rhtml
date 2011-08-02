@@ -1,0 +1,16 @@
+<div id="form_container">
+  <div id="cancel_link"><%= link_to_function "Cancel", "PostForm.toggle()", :class => 'delete small' %></div>
+  <div id="new_link"><span>+ </span><%= link_to_function "New #{post_type}", "PostForm.toggle()", :class => 'create' %></div>
+  <%= render :partial => 'form' %>
+</div>
+
+<div id="posts">
+  <h3>This week</h3>
+  <%= render :partial => "post", :collection => @this_week %>
+
+  <h3>Next three weeks</h3>
+  <%= render :partial => "post", :collection => @next_three_weeks %>
+
+  <h3>Beyond</h3>
+  <%= render :partial => "post", :collection => @beyond %>
+</div>

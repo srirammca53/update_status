@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/app/helpers"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   committed-rev="3039"
+   name="application_helper.rb"
+   text-time="2006-08-18T02:05:00.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="3a1f28b1e560cf597cd3f2a9afade628"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:00.000000Z"/>
+<entry
+   committed-rev="3042"
+   name="albums_helper.rb"
+   text-time="2006-08-18T02:11:25.000000Z"
+   committed-date="2006-08-18T05:19:50.962521Z"
+   checksum="69ffda11ab8758b98a33c0c6c02022e4"
+   last-author="scottr"
+   kind="file"
+   revision="3042"/>
+<entry
+   committed-rev="3045"
+   name="sessions_helper.rb"
+   text-time="2006-08-18T22:43:38.000000Z"
+   committed-date="2006-08-19T03:16:49.623004Z"
+   checksum="f55f635d09b0327ffc89515e294893b1"
+   last-author="scottr"
+   kind="file"
+   revision="3045"/>
+<entry
+   committed-rev="3042"
+   name="photos_helper.rb"
+   text-time="2006-08-18T02:22:53.000000Z"
+   committed-date="2006-08-18T05:19:50.962521Z"
+   checksum="70a41d38860968dade849b3a2f27f449"
+   last-author="scottr"
+   kind="file"
+   revision="3042"/>
+</wc-entries>

@@ -1,0 +1,7 @@
+Name:sreeram
+Age:24
+Qualification:12
+Income:6000
+Your result is
+You have a minimum Qualification
+You have no tax to pay so you are elgible for Goverment schemes

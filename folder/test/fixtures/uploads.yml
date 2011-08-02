@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  password: MyString
+  days: 1
+  file_name: MyString
+  content_type: MyString
+  file_size: MyString
+
+two:
+  password: MyString
+  days: 1
+  file_name: MyString
+  content_type: MyString
+  file_size: MyString

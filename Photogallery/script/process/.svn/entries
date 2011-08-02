@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/script/process"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   committed-rev="3039"
+   name="spawner"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="e7e52ded28489a821b5eb156f92ca0f5"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+<entry
+   committed-rev="3042"
+   name="inspector"
+   text-time="2006-08-18T05:18:25.000000Z"
+   committed-date="2006-08-18T05:19:50.962521Z"
+   checksum="73662c6991e4d3ea2332b5fcadd5b3d3"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T05:19:30.000000Z"
+   revision="3042"/>
+<entry
+   committed-rev="3039"
+   name="reaper"
+   text-time="2006-08-18T02:05:01.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="77608fa9e09e9f24410e7374c67956b7"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:01.000000Z"/>
+</wc-entries>

@@ -1,0 +1,17 @@
+<div class="question" id="<%= question.id %>">
+	<div class="q" id="<%= question.id %>_q">
+		<%=h question.question %>
+		<%= link_to_function "Reveal",
+		      "Quiz.reveal(#{question.id})",
+		      :class => "yellow" %>
+	</div>
+	<div class="a" id="<%= question.id %>_a" style="display: none">
+		<%=h question.answer %>
+		<%= link_to_function "Got It",
+		      "Quiz.answer('#{question.quiz_id}', #{question.id}, true)",
+		      :class => "green" %>
+		<%= link_to_function "Missed It",
+		      "Quiz.answer('#{question.quiz_id}', #{question.id}, false)",
+		      :class => "red" %>
+	</div>
+</div>

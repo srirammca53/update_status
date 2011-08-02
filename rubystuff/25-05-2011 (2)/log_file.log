@@ -1,0 +1,13 @@
+# Logfile created on Wed May 25 12:32:16 +0530 2011 by logger.rb/22285
+D, [2011-05-25T12:32:16.348509 #17322] DEBUG -- : Numerator: 10, denominator 2
+D, [2011-05-25T12:32:19.252025 #17324] DEBUG -- : Numerator: 10, denominator 2
+D, [2011-05-25T12:32:32.568729 #17337] DEBUG -- : Numerator: 10, denominator 0
+E, [2011-05-25T12:32:32.569373 #17337] ERROR -- : Error in division!: divided by 0
+D, [2011-05-25T12:32:33.460212 #17338] DEBUG -- : Numerator: 10, denominator 0
+E, [2011-05-25T12:32:33.461158 #17338] ERROR -- : Error in division!: divided by 0
+D, [2011-05-25T12:33:19.723597 #17352] DEBUG -- : Numerator: 10, denominator 0
+E, [2011-05-25T12:33:19.724302 #17352] ERROR -- : Error in division!: divided by 0
+D, [2011-05-25T12:33:32.278390 #17353] DEBUG -- : Numerator: 10, denominator 0
+E, [2011-05-25T12:33:32.279579 #17353] ERROR -- : Error in division!: divided by 0
+D, [2011-05-25T12:33:37.625573 #17359] DEBUG -- : Numerator: 10, denominator 0
+E, [2011-05-25T12:33:37.626501 #17359] ERROR -- : Error in division!: divided by 0

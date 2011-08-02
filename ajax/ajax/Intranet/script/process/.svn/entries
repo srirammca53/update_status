@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2984"
+   name=""
+   committed-date="2006-06-15T20:29:15.342388Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/script/process"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="2855"
+   name="spawner"
+   text-time="2006-02-01T22:20:40.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="e7e52ded28489a821b5eb156f92ca0f5"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2984"
+   name="inspector"
+   text-time="2006-06-15T16:51:18.000000Z"
+   committed-date="2006-06-15T20:29:15.342388Z"
+   checksum="73662c6991e4d3ea2332b5fcadd5b3d3"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-06-15T20:28:33.000000Z"/>
+<entry
+   committed-rev="2855"
+   name="reaper"
+   text-time="2006-02-01T22:20:40.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="77608fa9e09e9f24410e7374c67956b7"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2855"
+   name="spinner"
+   text-time="2006-02-01T22:20:40.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="69800f080d6bdd2f06c76c32f23c2c86"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+</wc-entries>

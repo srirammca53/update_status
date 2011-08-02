@@ -1,0 +1,6 @@
+<li id="question_<%= question.id %>">
+	<%=h question.question %> <em>(<%=h question.answer %>)</em> 
+	<%= link_to_function "x",
+	      remote_function(:url => destroy_q_quiz_url(:question_id => question),
+	        :complete => "$('question_#{question.id}').hide()") %>
+</li>

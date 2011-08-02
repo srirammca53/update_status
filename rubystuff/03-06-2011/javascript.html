@@ -1,0 +1,23 @@
+<html>
+<title>image browse</title>
+<head>
+<script type="text/javascript">
+
+
+function preview() {
+             myframe.src = myfile.files.item(0).getAsDataURL();
+	   document.getElementById("myframe").innerHTML = myframe.src;        
+                   }
+
+
+</script>
+</head>
+<body>
+<form id="f" name="id">
+Upload image 
+<input type="file" value="browse" id="myfile" name="myfile" onChange="javascript:preview();">
+<input type="button" value="preview" name="pic" id="pic" onclick="preview();" >
+<img src="link"id="myframe" name="myframe"  width="600px" height="500px" >
+</form>
+</body>
+</html>

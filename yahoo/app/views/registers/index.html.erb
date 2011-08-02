@@ -1,0 +1,31 @@
+<h1>Listing Users</h1>
+<%= link_to "home index", "home/index" %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>gender</th>
+    <th>Dob</th>
+    <th>country</th>
+    <th>Email</th>
+    
+   
+  </tr>
+
+<% @registers.each do |register| %>
+  <tr>
+    <td width="300px"><%= register.name %></td>
+    <td width="300px"><%= register.gender %></td>
+    <td width="300px"><%= register.birthday %></td>
+    <td width="300px"><%= register.country %></td>
+    <td width="300px"><%= register.email %></td>
+   
+    <td width="300px"><%= link_to 'Show', register %></td>
+    <td width="300px"><%= link_to 'Edit', edit_register_path(register) %></td>
+    <td width="300px"><%= link_to 'Destroy', register, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Account', new_register_path %>

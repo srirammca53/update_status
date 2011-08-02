@@ -1,0 +1,17 @@
+<div id="form_container">
+  <div id="cancel_link"><%= link_to_function "Cancel", "PostForm.toggle()", :class => 'delete small' %></div>
+  <div id="new_link"><span>+ </span><%= link_to_function "New #{post_type}", "PostForm.toggle()", :class => 'create' %></div>
+	<%= render :partial => 'form' %>
+</div>
+
+<%= javascript_tag "PostForm.toggle()" if @post and @post.errors.any? %>
+
+<div id="posts">
+
+	<div id="letter_links">
+		<%= link_to "All", { :letter => "" }, :class => (params[:letter].blank? ? 'active' : '') %>
+		<% ('A'..'Z').each do |letter| %><%= link_to letter, { :letter => letter }, :class => (params[:letter]==letter ? 'active' : '') %><% end %>
+	</div>
+
+	<%= render :partial => "post", :collection => @posts %>
+</div>

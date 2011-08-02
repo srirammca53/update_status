@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2855"
+   name=""
+   committed-date="2006-02-01T22:20:09.766136Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/doc"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="2855"
+   name="README_FOR_APP"
+   text-time="2006-02-01T22:20:40.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="b4c29cfcb0758d15bdf7afbd2a5c280a"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+</wc-entries>

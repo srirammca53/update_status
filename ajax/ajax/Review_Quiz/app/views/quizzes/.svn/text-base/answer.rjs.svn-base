@@ -1,0 +1,5 @@
+if @next
+  content = render :partial => "question", :locals => { :question => @next }
+  page.insert_html :bottom, :questions, content
+end
+page[:scoreboard].reload

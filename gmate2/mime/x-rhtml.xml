@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+		<mime-type type="text/x-ruby-source">
+			<comment>Ruby Embedded Code</comment>
+			<glob pattern="*.html.erb"/>
+			<glob pattern="*.rhtml"/>
+		</mime-type>
+		<mime-type type="text/x-eruby">
+    			<comment xml:lang="en">Ruby Embedded Code JavaScript</comment>
+    			<glob pattern="*.rjs"/>
+    			<glob pattern="*.erjs"/>
+		</mime-type>
+		<mime-type type="text/x-yaml">
+    			<comment xml:lang="en">YAML Ain't Markup Language</comment>
+    			<glob pattern="*.yml"/>
+		</mime-type>
+</mime-info>

@@ -1,0 +1,44 @@
+<%= form_for(@dairy) do |f| %>
+  <% if @dairy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dairy.errors.count, "error") %> prohibited this dairy from being saved:</h2>
+
+      <ul>
+      <% @dairy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <table border=1px>
+<tr bgcolor="gray">
+   <td> <font color="white"><%= f.label :name %></font></td>
+    <td><%= f.text_field :name %></td>
+ </tr>
+  <tr bgcolor="gray">
+    <td><font color="white"><%= f.label :mobile %></font></td>
+    <td><%= f.text_field :mobile %></td>
+ </tr>
+<tr bgcolor="gray">
+    <td><font color="white"><%= f.label :address %></font></td>
+    <td><%= f.text_area :address %></td>
+  </tr>
+<tr bgcolor="gray">
+    <td><font color="white"><%= f.label :relation %></font></td>
+    <td><%= f.text_field :relation %></td>
+</tr>
+<tr bgcolor="gray">
+  
+    <td><font color="white"><%= f.label :dob %></font></td>
+    <td><%= f.date_select :dob %></td>
+  </tr>
+<tr bgcolor="gray">
+    <td><font color="white"><%= f.label :location %></font></td>
+    <td><%= f.text_field :location %></td>
+</tr>
+</table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

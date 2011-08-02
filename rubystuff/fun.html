@@ -1,0 +1,14 @@
+<html>
+<head>
+<script type="text/javascript">
+var str = document.getElementById('file_path').value; 
+var str = str + document.getElementById('file_name').value;
+</script>
+</head>
+<form> 
+<input type="text" id="file_path" value="C:/" />
+<input type="file" id="file_name" /> 
+<input type="button" onclick="ajax_restore();" value="Restore Database" />
+</form>
+</body>
+</html>

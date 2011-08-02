@@ -1,0 +1,41 @@
+<%= form_for(:upload, @upload, :url => uploads_path, :html => {:multipart => true}) do |f| %>
+  
+<% if @upload.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this dairy from being saved:</h2>
+
+      <ul>
+      <% @upload.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+
+<div>
+
+<%= f.label :folder %><br/>
+<%= f.file_field :folder %> 
+
+</div>
+
+  <div>
+    <%= f.label :password %><br/>
+    <%= f.text_field :folder_password %>
+  </div><br>
+
+<div>
+
+<%= f.label :days %><br/>
+<%= f.text_field :folder_days %> 
+</div>
+<br>
+
+
+<br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

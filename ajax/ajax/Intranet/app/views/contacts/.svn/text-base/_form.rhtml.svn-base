@@ -1,0 +1,9 @@
+<% standard_form :post, @post do |f| %>
+	<%= f.text_field :name %>
+	<%= f.date_select :start_date, :label => "First Call" %>
+	<%= f.date_select :end_date, :label => "Last Call" %>
+	<%= f.text_field :phone %>
+	<%= f.text_field :email %>
+	<%= f.text_area :body, :label => "Notes" %>
+  <%= standard_submit %>
+<% end %>

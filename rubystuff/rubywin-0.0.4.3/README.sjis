@@ -1,0 +1,60 @@
+
+                           RubyWin
+
+	July. 7, 2001  M.Suketa <masaki.suketa@nifty.ne.jp>
+
+RubyWin は，オブジェクト指向スクリプト言語 Ruby の学習を
+支援することを目的として作成したツールです．
+
+RubyWin はフリーソフトウェアです．RubyWin は Ruby の配布条件
+に準じます．RubyWin は無保証です．RubyWin 自身のバグなどから
+発生するいかなる損害に対しても責任を持ちません．
+
+現在は、アルファバージョンです。バグがいっぱいあります。
+
+動作を確認している環境
+  Windows 2000
+
+開発環境
+  Windows 2000
+  mingw32-GCC 2.95.2 (MSVCRT version)
+  Ruby 1.6.4 [i386-mingw32]
+  Scintilla 1.38
+
+RubyWin についての質問，コメント, バグレポート等は
+masaki.suketa@nifty.ne.jp までお願いします．
+
+
+オブジェクト指向言語 Ruby について
+Ruby はまつもとゆきひろさんが開発した言語です．
+ソースコードは
+
+  ftp://ftp.ruby-lang.org/pub/ruby/
+
+から ftp で入手できます．
+
+また Ruby の公式サイト
+
+   http://www.ruby-lang.org/
+
+からも入手できます．
+
+RubyWin の Icon は，PiaZ. さんがデザインされたものを利用しています．
+RubyWin の Icon の著作権は PiaZ. さんにあります．
+(c) 1999-2000 PiaZ. All Rights Reserved
+
+
+日本語の扱い
+
+RubyWinで日本語を扱う場合には、必要に応じて rwlib\rwinit.rbを編集して下さい。
+例えば、日本語Windowsの場合は
+
+  # SJIS
+  $KCODE = "SJIS"
+  # 日本語コードを自動判定
+  RubyWin.auto_judge_jcode = true;
+  # ファイルのデフォルトの文字コードは SJIS
+  RubyWin::Buffer.default_fileio_code = "SJIS"
+
+にすれば良いでしょう。
+

@@ -1,0 +1,27 @@
+<% if @album.photos.any? %>
+  <ul>
+    <% @album.photos.each do |photo| %>
+      <li id="<%= photo.id %>">
+        <%= thumb_for photo %><br/>
+        <% if logged_in? %>
+          <%= link_to_function photo.name, nil, :class => "rollover", :id => "#{photo.id}_name" do |page|
+            page.toggle_edit_photo photo.id
+          end %>
+          <%= link_to_remote image_tag("delete", :class => 'icon', :id => "#{photo.id}_delete"), 
+                :url => photo_url(:album_id => @album, :id => photo), 
+                :method => :delete %>
+          <%= form_remote_tag :url => photo_url(:album_id => @album, :id => photo), 
+               :html => { :style => "display: none", :method => :put, :id => "#{photo.id}_edit" }, 
+               :before => update_page { |page|
+                  page["#{photo.id}_name"].update 'Saving...'
+                  page.toggle_edit_photo photo.id
+                } %>
+            <%= text_field_tag :name, photo.name %>
+          <%= end_form_tag %>
+        <% else %>
+          <%= photo.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

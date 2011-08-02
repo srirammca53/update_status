@@ -1,0 +1,12 @@
+<div id="scoreboard">
+	<div id="total">
+		<%= pluralize @quiz.questions_count, 'question' %>
+	</div>
+	<div id="score">
+		<span id="right"><%= right(@quiz.id).size %> right</span> / 
+		<span id="wrong"><%= wrong(@quiz.id).size %> wrong</span>
+	</div>
+	<div id="remaining">
+		<%= @quiz.questions_count - right(@quiz.id).size - wrong(@quiz.id).size %> remaining
+	</div>
+</div>

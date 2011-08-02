@@ -1,0 +1,199 @@
+/* Basics */
+/* ------------------------- */
+
+html {
+	background-color: #ddd;
+	padding: 20px;
+	border-top: 8px solid #494;
+	height: 100%;
+}
+
+body {
+	width: 80%;
+	margin: 0 auto 0 auto;
+	padding: 0 20px 0 20px;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #bbb;
+	background-color: #fff;
+	font-family: helvetica, arial, sans-serif;
+	min-height: 100%;
+}
+
+h1 {
+	float: left;
+}
+
+h2 a {
+	font-size: 0.5em;
+}
+
+.clear {
+	clear: both;
+}
+
+#links {
+	margin-top: -1.7em;
+	padding-left: 15px;
+	list-style-type: square;
+	font-size: 0.7em;
+}
+
+/* Links */
+/* ------------------------- */
+
+a {
+	color: #a44;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #464;
+}
+
+a.green, a.red, a.yellow {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	padding: 1px 2px;
+}
+a.green {
+	color: #363;
+	background-color: #cfc;
+	border: 1px solid #696;
+}
+a.red {
+	color: #633;
+	background-color: #fcc;
+	border: 1px solid #966;
+}
+a.yellow {
+	color: #663;
+	background-color: #ffc;
+	border: 1px solid #996;
+}
+
+/* Create Quiz */
+/* ------------------------- */
+
+#new_quiz {
+	font-size: .7em;
+	text-transform: uppercase;
+	float: right;
+	margin-top: 20px;
+	background-color: #bdb;
+	padding: 5px 10px;
+	border: 1px solid #9b9;
+}
+
+#new_quiz input[type='text'] {
+	width: 100px;
+	font-weight: bold;
+	background-color: #cfc;
+}
+
+/* Edit Quiz */
+/* ------------------------- */
+
+#new_question {
+	clear: right;
+	background-color: #bdb;
+	padding: 5px 10px;
+	border: 1px solid #9b9;
+	width: 55%;
+	padding-right: 80px;
+	padding-top: 10px;
+	margin-top: 50px;
+}
+#new_question h3 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 0.7em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#new_question label {
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: normal;
+	float: left;
+	width: 65px;
+	margin-top: 5px;
+}
+#new_question textarea {
+	width: 100%;
+	display: block;
+	height: 40px;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+#new_question input {
+	margin-left: 65px;
+}
+
+#starting {
+	color: #331;
+	background-color: #ffc;
+	border: 1px solid #cca;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+#finished {
+	color: #331;
+	background-color: #ffc;
+	border: 1px solid #cca;
+	padding: 10px;
+	width: 270px;
+}
+
+/* Take Quiz */
+/* ------------------------- */
+
+#questions {
+	padding-top: 20px;
+}
+
+.question .q {
+	margin-bottom: 10px;
+}
+.question .a {
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+
+/* Scoreboard */
+/* ------------------------- */
+
+#scoreboard {
+	padding: 6px;
+	float: right;
+	width: 150px;
+	color: #331;
+	background-color: #ffc;
+	border: 1px solid #cca;
+	text-align: center;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+#scoreboard #total, #scoreboard #remaining {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	color: #888;
+	letter-spacing: 0.1em;
+}
+
+#scoreboard #score {
+	font-weight: bold;
+	margin: 2px 0 3px 0;
+}
+
+#scoreboard #right {
+	color: #090;
+}
+#scoreboard #wrong {
+	color: #900;
+}

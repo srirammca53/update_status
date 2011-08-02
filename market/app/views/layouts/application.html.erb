@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Market</title>
+  <%= stylesheet_link_tag :all %>
+ <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+<%= javascript_include_tag 'rails' %>
+
+</head>
+<body>
+<div id="container">
+      <div id="flash_notice" style="display:none"></div>
+      
+
+<%= yield %>
+ </div>
+
+</body>
+</html>

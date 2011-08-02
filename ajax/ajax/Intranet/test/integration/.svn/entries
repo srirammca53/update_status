@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3030"
+   name=""
+   committed-date="2006-08-14T20:11:43.537955Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/test/integration"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3030"/>
+<entry
+   committed-rev="3030"
+   name="routes_test.rb"
+   text-time="2006-08-14T19:31:40.000000Z"
+   committed-date="2006-08-14T20:11:43.537955Z"
+   checksum="323611c0e773f0b515ba4c26156108af"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3030"
+   name="statuses_test.rb"
+   text-time="2006-08-14T20:10:42.000000Z"
+   committed-date="2006-08-14T20:11:43.537955Z"
+   checksum="9cb08f004682e4a8c722799e29455735"
+   last-author="scottr"
+   kind="file"/>
+</wc-entries>

@@ -1,0 +1,50 @@
+
+                       RubyWin
+
+	July. 7, 2001  M.Suketa <CQN02273@nifty.ne.jp>
+
+[What is RubyWin ?]
+RubyWin is an IDE for Ruby on Windows. Using RubyWin, You can
+learn about Ruby more easily. :-)
+RubyWin works on Windows 2000. (Maybe 95, 98, NT)
+Feel free to email comments and bug reports to masaki.suketa@nifty.ne.jp.
+
+[Remark]
+This version is alpha version and buggy!!!
+
+[Development Environment]
+  Windows 2000
+  Mingw32-GCC 2.95.2 (MSVCRT version)
+  Ruby 1.6.4 [i386-mingw32]
+  Scintilla 1.38
+
+[Copying]
+RubyWin is copyrighted free software by Masaki Suketa <masaki.suketa@nifty.ne.jp>. 
+You can redistribute it under the terms specified in the README file of the 
+Ruby distribution.
+
+
+[WARRANTY]
+  THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+  WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+  PURPOSE.
+
+
+[What is Ruby ?]
+Ruby is an object-oriented script language, copyrighted free software 
+by Yukihiro Matsumoto.
+
+You can download src file of Ruby from
+
+  ftp://ftp.ruby-lang.org/pub/ruby/
+
+or Ruby official site:
+
+   http://www.ruby-lang.org/
+
+
+[RubyWin Icon]
+RubyWin Icon is designed by PiaZ. 
+(c) 1999-2000 PiaZ. All Rights Reserved.
+

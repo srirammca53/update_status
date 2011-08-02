@@ -1,0 +1,22 @@
++ support SJIS, EUC, JIS code in console window
++ Ruby macro.
++ parse shbang option.
++ more intelligent auto indent.
++ add Tooltip to Toolbar.
++ Disable Toolbar.
++ search with regular expression.
++ debugger
++ command line
++ command prompt
++ Class browser
++ fix tab controlling bug
++ reload work space. 
++ customizable key binding 
++ cleaning (or not) console before run program
++ adding 1 - Clean console, 2 -View Line button
++ 'Recent Opened Files' (MRUF)
++ auto indent on/off
++ porting Java.
++ fix Ruby/Tk problem: proc{exit}
++ fix Ruby/Tk problem: rerun Ruby/Tk script.
+

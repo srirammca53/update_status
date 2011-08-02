@@ -1,0 +1,19 @@
+<%= render :partial => 'scoreboard' %>
+
+<h2><%= h(@quiz.name) %></h2>
+<ul id="links">
+	<% if mine? %><li><%= link_to "Edit this quiz", edit_quiz_url %></li><% end %>
+	<li style="display: none" id="startover">
+		<%= link_to "Start Over", reset_quiz_url, :method => :post %>
+	</li>
+</ul>
+
+<div id="questions">
+	<%= render :partial => "question", :collection => @questions %>
+</div>
+
+<div id="finished" style="display: none">
+	<strong>You're done!</strong> Now you can 
+	<%= link_to "start over", reset_quiz_url, :method => :post %>, 
+	or just <%= link_to "review what you missed.", quiz_url %>
+</div>

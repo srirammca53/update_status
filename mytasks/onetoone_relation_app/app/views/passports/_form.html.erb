@@ -1,0 +1,10 @@
+<%= form_for([@detail, @detail.passports.build]) do |f| %>
+  <div class="field">
+    <%= f.label :passport_no %><br />
+    <%= f.text_field :passport_no %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

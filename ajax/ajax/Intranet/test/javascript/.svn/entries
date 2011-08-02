@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2994"
+   name=""
+   committed-date="2006-07-10T05:27:13.423341Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/test/javascript"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="2994"
+   name="effects_test.html"
+   text-time="2006-07-08T22:42:47.000000Z"
+   committed-date="2006-07-10T05:27:13.423341Z"
+   checksum="f79778ce470cef41a43bf53bb8876861"
+   last-author="scottr"
+   kind="file"/>
+</wc-entries>

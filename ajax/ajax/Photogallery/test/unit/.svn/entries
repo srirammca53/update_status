@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/test/unit"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   committed-rev="3042"
+   name="album_test.rb"
+   text-time="2006-08-18T02:11:06.000000Z"
+   committed-date="2006-08-18T05:19:50.962521Z"
+   checksum="4e879d23c06a426d9cf3af30adafcb8a"
+   last-author="scottr"
+   kind="file"
+   revision="3042"/>
+<entry
+   committed-rev="3042"
+   name="photo_test.rb"
+   text-time="2006-08-18T02:11:12.000000Z"
+   committed-date="2006-08-18T05:19:50.962521Z"
+   checksum="77679bd6ef8379a170cb607185db4f1f"
+   last-author="scottr"
+   kind="file"
+   revision="3042"/>
+</wc-entries>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3024"
+   name=""
+   committed-date="2006-08-14T01:31:02.092173Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/app/views/contacts"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="3028"
+   name="show.rhtml"
+   text-time="2006-08-14T16:54:44.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="a7f695f7d5fe2a58c961d02b014fecc3"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+<entry
+   committed-rev="3024"
+   name="_form.rhtml"
+   text-time="2006-08-14T00:36:52.000000Z"
+   committed-date="2006-08-14T01:31:02.092173Z"
+   checksum="c08cb0720f7a5f0678db49173400dda1"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3028"
+   name="_post.rhtml"
+   text-time="2006-08-14T16:55:36.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="305baceb94e66d1f84094706ca6ab5d6"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+<entry
+   committed-rev="3028"
+   name="index.rhtml"
+   text-time="2006-08-14T16:43:01.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="fe1809395bf34b8045e71ecdf23df06e"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+<entry
+   committed-rev="3024"
+   name="new.rhtml"
+   text-time="2006-08-13T23:50:46.000000Z"
+   committed-date="2006-08-14T01:31:02.092173Z"
+   checksum="ccca1040ae942d5337769122fa4e10e6"
+   last-author="scottr"
+   kind="file"/>
+</wc-entries>

@@ -1,0 +1,10 @@
+<div class="post">
+	<div class="body no_user">
+		<h4><%= link_to post.reversed_name, :action => 'show', :id => post %></h4>
+		<p class="meta">
+			<span class="comments"><%= link_to pluralize(post.comments_count, 'comment'), :action => 'show', :id => post %></span>
+			<% if post.end_date %> Last called <%= time_ago_in_words post.end_date %> ago<% end %>
+		</p>
+	</div>
+	<%= clear_div %>
+</div>

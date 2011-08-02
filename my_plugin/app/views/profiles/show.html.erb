@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @profile.age %>
+</p>
+
+<p>
+  <b>Qualification:</b>
+  <%= @profile.qualification %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @profile.address %>
+</p>
+
+<p>
+  <b>Designation:</b>
+  <%= @profile.designation %>
+</p>
+
+<p>
+  <b>Salary:</b>
+  <%= @profile.salary %>
+</p>
+
+<p>
+  <b>About yourself:</b>
+  <%= @profile.about_yourself %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
+
+<p><%= link_to "Printable Invoice (PDF)", profile_path(@profile, :format => 'pdf') %></p>
+
+

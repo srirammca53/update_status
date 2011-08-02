@@ -1,0 +1,13 @@
+
+[How to Build]
+
++ If you have Mingw32-GCC
+1. run 'ruby config.rb'.
+2. run 'make'
+3. run 'make install'
+
++ If you have Visual C++,
+1. run 'ruby config.rb'
+2. run 'nmake'
+3. run 'nmake install'
+

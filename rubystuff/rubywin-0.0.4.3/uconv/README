@@ -1,0 +1,235 @@
+	     Unicode Conversion Module for Ruby
+			version 0.4.9
+
+		       Yoshida Masato
+
+
+
+- Introduction
+
+This is the module to convert ISO/IEC 10646 (Unicode) string
+and Japanese string each other.
+
+Supported character encodings are UCS-4, UTF-16, UTF-8,
+EUC-JP, CP932 (a variant of Shift_JIS for Japanese Windows).
+
+This cannot detect character encoding automatically.
+
+Note that EUC-JP conversion table has been changed.
+
+
+- Install
+
+This can work with ruby-1.6. I recommend you to use
+ruby-1.6.6 or later.
+
+Extract this package.
+
+  cd ext
+  gzip -dc < uconv-0.2.tar.gz | tar xvf -
+  cd uconv
+
+If you do not need EUC-JP or CP932 conversion, you can
+undefine USE_EUC or USE_SJIS to reduce the size of this
+module. On Windows System, you can define USE_WIN32API
+to use Win32 encoding conversion API.
+
+And make and install usually.
+For example, when Ruby supports dynamic linking on your OS,
+
+  ruby extconf.rb
+  make
+  make install
+
+
+- Usage
+
+If you do not link this module with Ruby statically, 
+
+  require "uconv"
+
+before using.
+
+
+- Module Function
+
+  UTF-16 and UCS-4 strings must be little-endian without
+  using u16swap (u2swap) and u4swap.
+
+  The functions that had treated USC-2 now can treat UTF-16.
+
+  All ZERO WIDTH NO-BREAK SPACE (U+FEFF) are regarded as
+  BYTE ORDER MARK (BOM) and deleted in some functions.
+
+  The function matrix is the following.
+
+             |               dest
+             |  EUC-JP    CP932     UTF-8    UTF-16    UCS-4
+    ---------+------------------------------------------------
+       EUC-JP|  \         -         euctou8  euctou16  -
+    s  CP932 |  -         \         sjistou8 sjistou16 -
+    r  UTF-8 |  u8toeuc   u8tosjis  \        u8tou16   u8tou4
+    c  UTF-16|  u16toeuc  u16tosjis u16tou8  u16swap   u16tou4
+       USC-4 |  -         -         u4tou8   u4tou16   u4swap
+
+
+  utf16 = Uconv.u16swap(utf16)
+  ucs2 = Uconv.u2swap(ucs2)
+  utf16 = Uconv.u16swap!(utf16)
+  ucs2 = Uconv.u2swap!(ucs2)
+    Byte-swaps a UTF-16 string. The little-endian string is
+    converted to the big-endian string.
+    Bang functions change the the parameter string directly.
+
+  ucs4 = Uconv.u4swap(ucs4)
+  ucs4 = Uconv.u4swap!(ucs4)
+    Byte-swaps a UCS-4 string. The 1234-ordered string is
+    converted into the 4321-ordered string.
+    Bang function changes the the parameter string directly.
+
+  utf16 = Uconv.u8tou16(utf8)
+  ucs2 = Uconv.u8tou2(utf8)
+    Converts a UTF-8 string into an UTF-16 string. The
+    Illegal UTF-8 sequence raises the exception. The
+    character except for a range from U-00000000 to
+    U-0010FFFF also raises the exception.
+
+  utf8 = Uconv.u16tou8(utf16)
+  utf8 = Uconv.u2tou8(ucs2)
+    Converts a UTF-16 string into a UTF-8 string. ZWNBSPs
+    (U+FEFF) are deleted in default. Illegal surrogate pair
+    raises the exception.
+
+  utf8 = Uconv.u4tou8(ucs4)
+    Converts a UTF-16 string into a UTF-8 string. ZWNBSPs
+    (U+FEFF) are deleted in default.
+
+  ucs4 = Uconv.u8tou4(utf8)
+    Converts a UTF-8 string into an UCS-4 string. The Illegal
+    UTF-8 sequence raises the exception. 
+
+  utf16 = Uconv.u4tou16(ucs4)
+    Converts a UTF-8 string into an UTF-16 string. The
+    character except for a range from U-00000000 to
+    U-0010FFFF also raises the exception.
+
+  ucs = Uconv.u16tou4(utf16)
+    Converts a UTF-16 string into a UTF-8 string. Illegal
+    surrogate pair raises the exception.
+
+  euc  = Uconv.u16toeuc(utf16)
+  euc  = Uconv.u2toeuc(ucs2)
+    Converts a UTF-16 string into an EUC-JP string. If
+    "Uconv.unknown_unicode_handler" function is not defined,
+    the character that cannot be converted is converted into '?'.
+
+  utf16 = Uconv.euctou16(euc)
+  ucs2 = Uconv.euctou2(euc)
+    Converts an EUC-JP string into a UTF-16 string.
+
+  euc  = Uconv.u8toeuc(utf8)
+    Converts a UTF-8 string into an EUC-JP string. This is
+    equal to u16toeuc(u8tou16(utf8)).
+
+  utf8 = Uconv.euctou8(euc)
+    Converts an EUC-JP string into a UTF-8 string. This is
+    equal to u16tou8(euctou16(euc)).
+
+  sjis  = Uconv.u16tosjis(utf16)
+  sjis  = Uconv.u2tosjis(ucs2)
+    Converts a UTF-16 string into an CP932 string. If
+    "Uconv.unknown_unicode_handler" function is not defined,
+    the character that cannot be converted is converted into '?'.
+
+  utf16 = Uconv.sjistou16(sjis)
+  ucs2 = Uconv.sjistou2(sjis)
+    Converts an CP932 string into a UTF-16 string. 
+
+  sjis  = Uconv.u8tosjis(utf8)
+    Converts a UTF-8 string into an CP932 string. This is
+    equal to u16tosjis(u8tou16(utf8)).
+
+  utf8 = Uconv.sjistou8(sjis)
+    Converts an CP932 string into a UTF-8 string. This is
+    equal to u16tou8(euctou16(sjis)).
+ 
+  euc = Uconv.unknown_unicode_handler(unicode)
+    When a UTF-16 or a UTF-8 string is converted into an EUC-JP
+    or CP932 string, this function is called if the
+    character that cannot converted is detected. The
+    parameter is a Unicode character code in integer. You
+    must return a string. This function is not defined
+    initially.
+
+  unicode = Uconv.unknown_euc_handler(euc)
+    When an EUC-JP string is converted into a UTF-16 or UTF-8
+    string, this function was called if the undefined
+    character by JIS X 0208 or JIS X 0212 is detected. 
+    The parameter is a EUC-JP string (2bytes or 3bytes).
+    You must return a Unicode value in integer (0-65535).
+
+  unicode = Uconv.unknown_sjis_handler(euc)
+    When an CP932 string is converted into a UTF-16 or UTF-8
+    string, this function was called if the undefined
+    character by CP932 is detected. The parameter is a
+    CP932 string (1byte or 2bytes).
+    You must return a Unicode value in integer (0-65535).
+
+  flag = Uconv::eliminate_zwnbsp
+  Uconv::eliminate_zwnbsp = flag
+    Gets/sets ZWNBSP elimination flag. Flag must be true or false.
+    It is true in the initial state. If true, u4tou8 and
+    u16tou8 functions eliminate all ZWNBSPs, if false, they
+    preserve all ZWNBSPs.
+
+  flag = Uconv::shortest
+  Uconv::shortest = flag
+    Gets/sets the shortest form flag. Flag must be true or false.
+    It is true in the initial state. If true, u8to*
+    functions raise a exception when the UTF-8 string is not
+    the shortest form.
+
+  char = Uconv::replace_invalid
+  Uconv::replace_invalid(char)
+    Ges/Sets the replacement character for the invalid byte
+    sequence in UTF-8, UTF-16, UCS-4 strings. If nil, the
+    invalid byte stream raises a exception. If a non-nil
+    integer, it is replaced by the replacement
+    character. The initial replacement character is nil.
+
+
+- Copying
+
+This extension module is copyrighted free software by
+Yoshida Masato.
+
+You can redistribute it and/or modify it under the same term
+as Ruby.
+
+
+- Author
+
+ Yoshida Masato <yoshidam@yoshidam.net>
+
+
+- History
+
+ Feb 10, 2002 version 0.4.9 adds replace_invalid
+ Dec 10, 2001 version 0.4.8 supports the tainted status
+ Nov 23, 2001 version 0.4.7 checks non-shortest form UTF-8
+                            and changes Exception into Uconv::Error
+ Mar  4, 2001 version 0.4.6 fixes s2u_conv
+                            and adds USE_WIN32API
+ Jan 30, 2001 version 0.4.5 fixes u2s_conv
+                            and changes USC/CP932 conversion table
+ Apr 18, 2000 version 0.4.4 SJIS to UCS conversion bug
+ Mar 11, 2000 version 0.4.3 Eliminates non-constant initializers
+ Nov 23, 1999 version 0.4.2 Appends eliminate_zwnbsp flag
+                            Replace ustring library
+ Nov  5, 1999 version 0.4.0 Supports CP932
+ Mar 29, 1999 version 0.3.1 Removes xmallocs
+ Feb 22, 1999 version 0.3.0 Supports UCS-4 and UTF-16
+ Jan 13, 1999 version 0.2.2 Supports Japanese supplement characters
+ Aug 15, 1998 version 0.2.1 Appends this README file
+ Jul 24, 1998 version 0.2
+ Jul  8, 1998 version 0.1

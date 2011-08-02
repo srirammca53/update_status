@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3023"
+   name=""
+   committed-date="2006-08-14T01:28:16.305963Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/public/javascripts"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="2983"
+   name="prototype.js"
+   text-time="2006-06-15T16:51:18.000000Z"
+   committed-date="2006-06-15T20:00:36.827897Z"
+   checksum="2b17dff9d22eda2b6f6c485a99aec5d6"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:41.000000Z"/>
+<entry
+   committed-rev="2994"
+   name="builder.js"
+   text-time="2006-04-07T03:19:50.000000Z"
+   committed-date="2006-07-10T05:27:13.423341Z"
+   checksum="6b737ecca99b73e70149195653627e4a"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2983"
+   name="effects.js"
+   text-time="2006-06-15T16:51:18.000000Z"
+   committed-date="2006-06-15T20:00:36.827897Z"
+   checksum="1bf9e7ea099a222968c0f52cdee468be"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:41.000000Z"/>
+<entry
+   committed-rev="2994"
+   name="unittest.js"
+   text-time="2006-04-07T03:19:50.000000Z"
+   committed-date="2006-07-10T05:27:13.423341Z"
+   checksum="19e5e5117633a8bc41724d0bc67e4162"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2983"
+   name="dragdrop.js"
+   text-time="2006-06-15T16:51:18.000000Z"
+   committed-date="2006-06-15T20:00:36.827897Z"
+   checksum="7d686eb473f836647e9d95cc13655dd3"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:41.000000Z"/>
+<entry
+   committed-rev="2983"
+   name="controls.js"
+   text-time="2006-06-15T16:51:18.000000Z"
+   committed-date="2006-06-15T20:00:36.827897Z"
+   checksum="23cef7404ffe6d410b0c235433771d51"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:41.000000Z"/>
+<entry
+   committed-rev="3028"
+   name="application.js"
+   text-time="2006-08-14T16:02:12.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="30ef29620139d43b4603fa0a17936287"
+   last-author="scottr"
+   kind="file"
+   revision="3028"/>
+</wc-entries>

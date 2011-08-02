@@ -1,0 +1,18 @@
+<h1>User detials</h1>
+<p>User login</p>
+<%= form_tag("/user_details") do %>
+<div>
+    <%= label_tag :username %><br />
+    <%= text_field_tag :username %>
+  </div>
+  <div>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </div>
+<div>
+    <%= submit_tag "login"%>
+
+  </div>
+<% end %>
+
+

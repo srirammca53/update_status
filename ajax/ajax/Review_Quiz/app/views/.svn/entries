@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3031"
+   name=""
+   committed-date="2006-08-15T02:32:39.029882Z"
+   url="http://redgreenblu.com/svn/work/quiz/app/views"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3033"/>
+<entry
+   name="layouts"
+   kind="dir"/>
+<entry
+   name="answers"
+   kind="dir"
+   deleted="true"/>
+<entry
+   name="questions"
+   kind="dir"
+   deleted="true"/>
+<entry
+   name="quizzes"
+   kind="dir"/>
+</wc-entries>

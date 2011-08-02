@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3024"
+   name=""
+   committed-date="2006-08-14T01:31:02.092173Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/test/unit"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="3023"
+   name="user_test.rb"
+   text-time="2006-08-14T01:01:19.000000Z"
+   committed-date="2006-08-14T01:28:16.305963Z"
+   checksum="dcfe807d3f614ffa20c76ba050a1cd5e"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2883"
+   name="document_test.rb"
+   text-time="2006-02-02T04:20:05.000000Z"
+   committed-date="2006-02-02T04:45:37.906083Z"
+   checksum="cd040f45ade474ea0b4831233dd19716"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2883"
+   name="message_test.rb"
+   text-time="2006-02-02T04:24:10.000000Z"
+   committed-date="2006-02-02T04:45:37.906083Z"
+   checksum="25f9a07f9a5ce56b111cfa742cf0b42d"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3023"
+   name="post_test.rb"
+   text-time="2006-08-14T01:00:42.000000Z"
+   committed-date="2006-08-14T01:28:16.305963Z"
+   checksum="23662e452825948c95c895f8a2e7c70e"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2858"
+   name="attachment_test.rb"
+   text-time="2006-02-01T22:22:14.000000Z"
+   committed-date="2006-02-01T22:26:33.099155Z"
+   checksum="6762995481e978c69dc632b2df368379"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2883"
+   name="plan_test.rb"
+   text-time="2006-02-02T04:22:23.000000Z"
+   committed-date="2006-02-02T04:45:37.906083Z"
+   checksum="df9b84cc453bf8d383291ec855156674"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3024"
+   name="contact_test.rb"
+   text-time="2006-08-13T19:05:17.000000Z"
+   committed-date="2006-08-14T01:31:02.092173Z"
+   checksum="c8d34c79034a8b73afc664543c14112e"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2883"
+   name="comment_test.rb"
+   text-time="2006-02-02T04:23:28.000000Z"
+   committed-date="2006-02-02T04:45:37.906083Z"
+   checksum="685d00af8c1dbdb1b2b82bffc61ca5de"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3024"
+   name="project_test.rb"
+   text-time="2006-08-13T18:47:31.000000Z"
+   committed-date="2006-08-14T01:31:02.092173Z"
+   checksum="b843fa22877b997c097d8297989fbc94"
+   last-author="scottr"
+   kind="file"/>
+</wc-entries>

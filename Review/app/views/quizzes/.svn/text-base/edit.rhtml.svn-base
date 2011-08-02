@@ -1,0 +1,29 @@
+<h2>Edit: <%= @quiz.name %></h2>
+
+<ul id="links">
+	<li id="done" <% unless @quiz.questions.any? %>style="display: none"<% end %>>
+		<%= link_to "Take the quiz", quiz_url %>
+	</li>
+</ul>
+
+<ul id="quiz">
+	<% @quiz.questions.each do |question| %>
+		<%= render :partial => "edit_question", :locals => { :question => question } %>
+	<% end %>
+</ul>
+<%= sortable_element :quiz, :url => reorder_quiz_url %>
+
+<% remote_form_for :question, Question.new, 
+     :url => create_q_quiz_url,
+     :html => { :id => "new_question",
+	     :onKeyPress  => "return Quiz.capture_keypress(event);" },
+	     :complete    => "Quiz.update_hints()" do |f| %>
+	<div id="starting" <% if @quiz.questions.any? %>style="display: none"<% end %>>
+		<strong>Add the first question</strong> to your new quiz.
+	</div>
+	<h3>Add a Question</h3>
+	<label for="question_question">Question</label><%= f.text_area :question %>
+	<label for="question_answer">Answer</label><%= f.text_area :answer %>
+	<%= submit_tag "Save" %>
+	<%= javascript_tag "$('question_question').focus()" %>
+<% end %>

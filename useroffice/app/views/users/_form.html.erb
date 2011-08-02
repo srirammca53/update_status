@@ -1,0 +1,39 @@
+<%= form_for(@user) do |f| %>
+  
+
+  <div>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+  <div>
+    <%= f.label :salary %><br />
+    <%= f.text_field :salary %>
+  </div>
+ <div>
+   <%= f.label :gender %><br/>
+    <%= f.select "gender", options_for_select([ "male", "female"], "select gender") %>
+  </div>
+<div>
+ <%= f.label(:nationality, "nationality") %>
+<%= f.radio_button(:nationality, "Indian") %>
+<%= f.label(:nationality, "Indian") %>
+<%= f.radio_button(:nationality, "Other_country") %>
+<%= f.label(:nationality, "Other_country") %>
+</div>
+<br>
+<div>
+<%= f.label(:languages, "languages") %>
+<%= f.check_box(:languages, :value =>"english") %>
+  <%= f.label(:languages, "english") %>
+<%= f.check_box(:languages, :value =>"telugu") %>
+  <%= f.label(:languages, "telugu") %>
+</div>
+<br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<h1>Listing googles</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Age</th>
+     <th>Commenter</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @googles.each do |google| %>
+  <tr>
+    <td><%= google.username %></td>
+    <td><%= google.password %></td>
+    <td><%= google.age %></td>
+     <td><%= google.commenter %></td>
+    <td><%= google.comment %></td>
+    <td><%= link_to 'Show', google %></td>
+    <td><%= link_to 'Edit', edit_google_path(google) %></td>
+    <td><%= link_to 'Destroy', google, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Google', new_google_path %>

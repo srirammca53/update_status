@@ -1,0 +1,13 @@
+
+<%= form_for(@account, @account.credit) do |f| %>
+  <table>
+<tr>
+    <td><%= f.label :credit_by %></td>
+    <td><%= f.text_field :credit_by %></td>
+ </tr>
+<tr>
+ 
+    <td><%= f.submit %></td> 
+  </tr>
+</table>
+<% end %>

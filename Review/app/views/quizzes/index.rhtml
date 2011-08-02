@@ -1,0 +1,11 @@
+<h2>Recent Quizzes</h2>
+
+<% if @quizzes.any? %>
+	<ul>
+		<% @quizzes.each do |quiz| %>
+			<li><%= link_to h(quiz.name), quiz_url(:id => quiz) %></li>
+		<% end %>
+	</ul>
+<% else %>
+	<p><em>There are no quizzes yet.</em></p>
+<% end %>

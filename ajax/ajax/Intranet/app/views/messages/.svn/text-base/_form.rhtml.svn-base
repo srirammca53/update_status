@@ -1,0 +1,7 @@
+<% standard_form :post, @post do |f| %>
+	<%= f.text_field :name, :label => "Subject" %>
+	<%= f.text_area :body, :label => "Message body" %>
+	<%= standard_submit %>
+<% end %>
+
+

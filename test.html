@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type="text/javascript">
+function getStates(val){
+alert(val);
+switch(val)
+{
+	case 'India':
+	document.f.state.options[0] =new Option('AP');
+	document.f.state.options[1] =new Option('Delhi');
+	document.f.state.options[2] =new Option('MP');
+	break;
+	case 'U.S.A':
+	document.f.state.options[0] =new Option('AA');
+	document.f.state.options[1] =new Option('BB');
+	document.f.state.options[2] =new Option('CC');
+	case 'Australia':
+	document.f.state.options[0] =new Option('GG');
+	document.f.state.options[1] =new Option('HH');
+	document.f.state.options[2] =new Option('JJ');
+	
+	
+}
+}
+</script>
+</head>
+<body>
+<form name="f" id="f">
+<table>
+<tr>
+<td>Select Your Country :</td>
+<td >
+<select name="country" onchange="getStates(this.value); ">
+<option value="India">India</option>
+<option value="U.S.A">U.S.A</option>
+<option value="Australia">Australia</option>
+</select>
+
+</td>
+<td >&nbsp;</td>
+</tr>
+
+<tr>
+<td >Select Your State :</td>
+<td >
+<select name="state">
+</select>
+</td>
+<td >&nbsp;</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

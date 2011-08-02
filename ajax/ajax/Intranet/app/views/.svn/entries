@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3024"
+   name=""
+   committed-date="2006-08-14T01:31:02.092173Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/app/views"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   name="comments"
+   kind="dir"/>
+<entry
+   name="projects"
+   kind="dir"/>
+<entry
+   name="layouts"
+   kind="dir"/>
+<entry
+   name="documents"
+   kind="dir"/>
+<entry
+   name="users"
+   kind="dir"/>
+<entry
+   name="sessions"
+   kind="dir"/>
+<entry
+   name="messages"
+   kind="dir"/>
+<entry
+   name="plans"
+   kind="dir"/>
+<entry
+   name="contacts"
+   kind="dir"/>
+</wc-entries>

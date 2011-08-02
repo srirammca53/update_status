@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2985"
+   name=""
+   committed-date="2006-06-29T04:00:59.399059Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/tmp"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   name="cache"
+   kind="dir"/>
+<entry
+   name="sessions"
+   kind="dir"/>
+<entry
+   name="sockets"
+   kind="dir"/>
+</wc-entries>

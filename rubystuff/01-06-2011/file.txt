@@ -1,0 +1,10 @@
+# program to read content from exixting file and count the no of words
+
+
+afile = File.open("file.txt","r")
+yes = File.exists("file.txt")
+puts yes
+counts = afile.readlines("file.txt")
+word = (counts.to_s).split(" ")
+puts "No Of words in the file #{word.length}"
+

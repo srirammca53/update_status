@@ -1,0 +1,10 @@
+ActionController::Routing::Routes.draw do |map|
+
+  map.resources :sessions, :messages, :plans, :documents, :projects, :contacts, :categories, :member => { :download => :get }
+  map.resources :users, :collection => { :statuses => :get }, :member => { :status => :any }
+  map.resources :comments, :path_prefix => "/:post_type/:post_id"
+  
+  map.home '', :controller => 'messages', :action => 'home'
+  map.connect ':controller/:action/:id'
+
+end

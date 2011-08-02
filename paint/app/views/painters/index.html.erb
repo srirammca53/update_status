@@ -1,0 +1,29 @@
+<h1>Listing painters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Paint cost</th>
+    <th>Points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @painters.each do |painter| %>
+  <tr>
+    <td><%= painter.name %></td>
+    <td><%= painter.age %></td>
+    <td><%= painter.paint_cost %></td>
+    <td><%= painter.points %></td>
+    <td><%= link_to 'Show', painter %></td>
+    <td><%= link_to 'Edit', edit_painter_path(painter) %></td>
+    <td><%= link_to 'Destroy', painter, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Painter', new_painter_path %>

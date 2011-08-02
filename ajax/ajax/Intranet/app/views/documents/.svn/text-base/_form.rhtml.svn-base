@@ -1,0 +1,7 @@
+<% standard_form :post, @post do |f| %>
+	<%= f.text_field :name %>
+	<% label = (@post.new_record? or !@post.attachment_id) ? "File to upload" : "File to upload (overwriting existing file)" %>
+	<%= f.file_field :file, :label => label %>
+	<%= f.text_area :body, :label => "Description" %>
+  <%= standard_submit %>
+<% end %>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2984"
+   name=""
+   committed-date="2006-06-15T20:29:15.342388Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/db/migrate"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+</wc-entries>

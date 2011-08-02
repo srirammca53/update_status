@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3031"
+   name=""
+   committed-date="2006-08-15T02:32:39.029882Z"
+   url="http://redgreenblu.com/svn/work/quiz/test"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3033"/>
+<entry
+   name="unit"
+   kind="dir"/>
+<entry
+   committed-rev="3031"
+   name="test_helper.rb"
+   text-time="2006-08-15T02:33:04.000000Z"
+   committed-date="2006-08-15T02:32:39.029882Z"
+   checksum="fc4d849e28f089141debb18b22058277"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:04.000000Z"/>
+<entry
+   name="functional"
+   kind="dir"/>
+<entry
+   name="integration"
+   kind="dir"/>
+<entry
+   name="fixtures"
+   kind="dir"/>
+<entry
+   name="mocks"
+   kind="dir"/>
+</wc-entries>

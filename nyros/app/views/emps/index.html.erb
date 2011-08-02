@@ -1,0 +1,31 @@
+<h1>Listing Employees</h1>
+<%#= link_to "home index", "home/index" %>
+<table>
+  <tr>
+    <th>Employee name</th>
+    <th>Employee department</th>
+    <th>Date</th>
+    <th>Present status</th>
+    <th>late</th>
+    <th>Absent</th>
+   
+  </tr>
+
+<% @emps.each do |emp| %>
+  <tr>
+    <td width="300px"><%= emp.empname %></td>
+    <td width="300px"><%= emp.empdepartment %></td>
+    <td width="300px"><%= emp.date %></td>
+    <td width="300px"><%= emp.present %></td>
+    <td width="300px"><%= emp.late %></td>
+    <td width="300px"><%= emp.absent %></td>
+    <td width="300px"><%= link_to 'Show', emp %></td>
+    <td width="300px"><%= link_to 'Edit', edit_emp_path(emp) %></td>
+    <td width="300px"><%= link_to 'Destroy', emp, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Account', new_emp_path %>

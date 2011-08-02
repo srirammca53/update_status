@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3031"
+   name=""
+   committed-date="2006-08-15T02:32:39.029882Z"
+   url="http://redgreenblu.com/svn/work/quiz/public/javascripts"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3033"/>
+<entry
+   committed-rev="3031"
+   name="prototype.js"
+   text-time="2006-08-15T02:33:07.000000Z"
+   committed-date="2006-08-15T02:32:39.029882Z"
+   checksum="f57aaa32617e68bc8328178fd26c1f52"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:07.000000Z"/>
+<entry
+   committed-rev="3031"
+   name="effects.js"
+   text-time="2006-08-15T02:33:07.000000Z"
+   committed-date="2006-08-15T02:32:39.029882Z"
+   checksum="1bf9e7ea099a222968c0f52cdee468be"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:07.000000Z"/>
+<entry
+   committed-rev="3031"
+   name="dragdrop.js"
+   text-time="2006-08-15T02:33:07.000000Z"
+   committed-date="2006-08-15T02:32:39.029882Z"
+   checksum="7d686eb473f836647e9d95cc13655dd3"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:07.000000Z"/>
+<entry
+   committed-rev="3038"
+   name="application.js"
+   text-time="2006-08-17T18:24:59.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="f07a864a056dd2a26595f4144af74706"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:07.000000Z"
+   revision="3038"/>
+<entry
+   committed-rev="3031"
+   name="controls.js"
+   text-time="2006-08-15T02:33:07.000000Z"
+   committed-date="2006-08-15T02:32:39.029882Z"
+   checksum="23cef7404ffe6d410b0c235433771d51"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:07.000000Z"/>
+</wc-entries>

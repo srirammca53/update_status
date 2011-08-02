@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @detail.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @detail.age %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @detail.address %>
+</p>
+ 
+<h2>Paasport</h2>
+<%= render :partial => "passports/passport",
+           :collection => @detail.passports %>
+<h2>Add a passport no:</h2>
+<%= render "passports/form" %>
+
+<%= link_to 'Edit', edit_detail_path(@detail) %> |
+<%= link_to 'Back', details_path %>

@@ -1,0 +1,454 @@
+
+Database :  "collegeAdmin"
+
+Tables   :  Admin
+            Teaching
+            Nonteaching
+            students
+	  staff
+
+1.table "Admin"
+
+Fields:
+college_id
+college_name
+principal_id     # primary key 
+principal_name
+from_year
+to_year
+total_students
+total_staff
+annual_salaries
+
+From this table we can access the main details of college with name and id and also principal's  service 
+list with the period of working years.
+
+2.Teaching
+
+Fieds:
+professor_id
+professor_name
+professor_salary
+professor_sevice
+prncipal_id  #foriegn key
+
+3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ActiveRecord::Base.connection.instance_variable_get(:@config)[:database].split('/').last
+
+
+nyros@nyros-desktop:~$ sqlite3 test.db
+SQLite version 3.6.22
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> create table train_reservation(id int not null primary key,
+   ...> name string,
+   ...> from string,
+   ...> to string,
+   ...> price int);
+Error: near "from": syntax error
+sqlite> create table train_reservation(id int not null primary key,
+   ...> name string,
+   ...> from_station string,
+   ...> to string,
+   ...> price int);
+Error: near "to": syntax error
+sqlite> create table train_reservation(id int not null primary key,
+   ...> name string,
+   ...> from_station string,
+   ...> destination string,
+   ...> price int);
+sqlite> .schema train_reservation;
+sqlite> insert into tratin_reservation values (1200,"goutami","kakinada","secunderabad",270)
+   ...> ;
+Error: no such table: tratin_reservation
+sqlite> insert into train_reservation values (1200,"goutami","kakinada","secunderabad",270)
+   ...> insert into train_reservation values (1200,"goutami","kakinada","Banglore",470)
+   ...> insert into train_reservation values (1200,"goutami","kakinada","vishakapatnam",170)
+   ...> alter table train_reservation set id=1201 where destination="Banglore";
+Error: near "insert": syntax error
+sqlite> alter table train_reservation set id=1201 where destination="Banglore";
+Error: near "set": syntax error
+sqlite> alter table train_reservation set id=1201 where destination='Banglore';
+Error: near "set": syntax error
+sqlite> alter table train_reservation SET id=1201 where destination='Banglore';
+Error: near "SET": syntax error
+sqlite> update train_reservation SET id=1201 where destination='Banglore';
+sqlite> select * from train_reservations
+   ...> ;
+Error: no such table: train_reservations
+sqlite> select * from train_reservation;
+sqlite> update train_reservation SET id=1202 where destination='vishakapatnam';sqlite> .mode column
+sqlite> .headers on
+sqlite> select * from train)reservation
+   ...> ;
+Error: near ")": syntax error
+sqlite> .mode column
+sqlite> .headers on
+sqlite> select * from train_reservation
+   ...> ;
+sqlite>  insert into train_reservation values (1200,"goutami","kakinada","secunderabad",270)
+   ...> ;
+sqlite> insert into train_reservation values (1200,"goutami","kakinada","Banglore",470)
+   ...> ;
+Error: column id is not unique
+sqlite> insert into train_reservation values (1201,"godavari","kakinada","Banglore",800)
+   ...> ;
+sqlite> insert into train_reservation values (1202,"ganga kaveri","kakinada","varanasi",1800)
+   ...> ;
+sqlite> select * from train_reservation
+   ...> ;
+id          name        from_station  destination   price     
+----------  ----------  ------------  ------------  ----------
+1200        goutami     kakinada      secunderabad  270       
+1201        godavari    kakinada      Banglore      800       
+1202        ganga kave  kakinada      varanasi      1800      
+sqlite> create table bus_reservation(id int not null,
+   ...> bus_name string,
+   ...> price int,
+   ...> );
+Error: near ")": syntax error
+sqlite> create table bus_reservation(id int not null,
+   ...> bus_name string,
+   ...> price int
+   ...> );
+sqlite> drop bus_reservation
+   ...> ;
+Error: near "bus_reservation": syntax error
+sqlite> drop table bus_reservation;
+sqlite> create table bus_reservation(id int not null,
+   ...> bus_name string,
+   ...> from_station string,
+   ...> destination string,
+   ...> price int );
+sqlite> insert into bus_reservation(120,"super delux","kakinada","secunderabad",450);
+Error: near "120": syntax error
+sqlite> insert into bus_reservation values (120,"super delux","kakinada","secunderabad",450);
+sqlite> insert into bus_reservation values (121,"garuda","kakinada","Banglore",800);
+sqlite> insert into bus_reservation values (122,"garuda","kakinada","varanasi",2500);
+sqlite> select * from bus_reservation
+   ...> ;
+id          bus_name     from_station  destination   price     
+----------  -----------  ------------  ------------  ----------
+120         super delux  kakinada      secunderabad  450       
+121         garuda       kakinada      Banglore      800       
+122         garuda       kakinada      varanasi      2500      
+sqlite> select price,price from bus_reservation as b,train_reservation as t on b.from_station=t.from_station 
+   ...> ;
+Error: ambiguous column name: price
+sqlite> select bus_reservation.price,train_reservation.price from bus_reservation as b,train_reservation as t on b.from_station=t.from_station 
+   ...> ;
+Error: no such column: bus_reservation.price
+sqlite> select bus_reservation.price as bus, train_reservation.price as train from bus_reservation.from_station=train_reservation.from_station;Error: near "=": syntax error
+sqlite> select bus_reservation.price as bus, train_reservation.price as train from bus_reservation.from_station = train_reservation.from_station;
+Error: near "=": syntax error
+sqlite> select bus_reservation.price as bus, train_reservation.price as train from bus_reservation, train_reservation where bus_reservation.from_station = train_reservation.from_station;
+bus         train     
+----------  ----------
+450         270       
+450         800       
+450         1800      
+800         270       
+800         800       
+800         1800      
+2500        270       
+2500        800       
+2500        1800      
+sqlite> select bus_reservation.price,train_reservation.price from bus_reservation as b,train_reservation as t where b.from_station=t.from_station;
+Error: no such column: bus_reservation.price
+sqlite> select bus_reservation.price, train_reservation.price from bus_reservation,train_reservation where b.from_station=t.from_station;
+Error: no such column: b.from_station
+sqlite> select bus_reservation.price, train_reservation.price from bus_reservation,train_reservation where bus_reservation.from_station=train_reservation.from_station;
+price       price     
+----------  ----------
+450         270       
+450         800       
+450         1800      
+800         270       
+800         800       
+800         1800      
+2500        270       
+2500        800       
+2500        1800      
+sqlite> select bus_reservation.price, train_reservation.price from bus_reservation,train_reservation where bus_reservation.from_station=train_reservation.from_station;
+price       price     
+----------  ----------
+450         270       
+450         800       
+450         1800      
+800         270       
+800         800       
+800         1800      
+2500        270       
+2500        800       
+2500        1800      
+sqlite> select bus_reservation.from_station,bus_reservation.destination,bus_reservation.price,train_reservation.from_station,train_reservation.destination train_reservation.price from bus_reservation,train_reservation where bus_reservation.from_station=train_reservation.from_station;
+Error: near ".": syntax error
+sqlite> select bus_reservation.destination,bus_reservation.price,train_reservation.destination train_reservation.price from bus_reservation,train_reservation where bus_reservation.from_station=train_reservation.from_station;Error: near ".": syntax error
+sqlite> select bus_name ,train_name from bus_reservation natural join reservation.
+   ...> ;
+Error: near ";": syntax error
+sqlite> select * from bus_reservation;
+id          bus_name     from_station  destination   price     
+----------  -----------  ------------  ------------  ----------
+120         super delux  kakinada      secunderabad  450       
+121         garuda       kakinada      Banglore      800       
+122         garuda       kakinada      varanasi      2500      
+sqlite> select * from train_reservation;
+id          name        from_station  destination   price     
+----------  ----------  ------------  ------------  ----------
+1200        goutami     kakinada      secunderabad  270       
+1201        godavari    kakinada      Banglore      800       
+1202        ganga kave  kakinada      varanasi      1800      
+sqlite> select bus_name ,name from bus_reservation natural join train_reservation.
+   ...> ;
+Error: near ";": syntax error
+sqlite> select bus_name ,name from bus_reservation natural join train_reservation;
+sqlite> select bus_name ,name from bus_reservation natural join train_reservation;
+sqlite> select bus_name ,name from bus_reservation,train_reservation;bus_name     name      
+-----------  ----------
+super delux  goutami   
+super delux  godavari  
+super delux  ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+sqlite> select bus_name ,name from bus_reservation natural join train_reservation;
+sqlite> select bus_name ,name from bus_reservation cross join train_reservation; 
+bus_name     name      
+-----------  ----------
+super delux  goutami   
+super delux  godavari  
+super delux  ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+sqlite> select bus_name ,name from bus_reservation cross join train_reservation;
+bus_name     name      
+-----------  ----------
+super delux  goutami   
+super delux  godavari  
+super delux  ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+sqlite> select bus_name ,name from bus_reservation cross join train_reservation on bus_reservation.from_station=train_reservation.from_station;
+bus_name     name      
+-----------  ----------
+super delux  goutami   
+super delux  godavari  
+super delux  ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+sqlite> select bus_name ,name from bus_reservation cross join train_reservation using (destination);
+bus_name     name      
+-----------  ----------
+super delux  goutami   
+garuda       godavari  
+garuda       ganga kave
+sqlite> select bus_name ,name from bus_reservation join train_reservation;bus_name     name      
+-----------  ----------
+super delux  goutami   
+super delux  godavari  
+super delux  ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+garuda       goutami   
+garuda       godavari  
+garuda       ganga kave
+sqlite> select bus_name ,name from bus_reservation outer join train_reservation on bus_reservation.from_station=train_reservation.from_station;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> select bus_name ,name from bus_reservation outer join train_reservation on bus_reservation.from_station=train_reservation.from_station;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> SELECT sqlite_version() AS 'SQLite Version';
+SQLite Version
+--------------
+3.6.22        
+sqlite> SELECT random() AS Random;
+Random             
+-------------------
+3486102618266965749
+sqlite> select max(price) from train_reservation;
+max(price)
+----------
+1800      
+sqlite> select max(price) from train_reservation where price not in(select max(price) from train_reservation);
+max(price)
+----------
+800       
+sqlite> select length(*sriram);
+Error: near "sriram": syntax error
+sqlite> select length("sriram");
+length("sriram")
+----------------
+6               
+sqlite> select date('now');
+date('now')
+-----------
+2011-06-09 
+sqlite> select datetime('now');
+datetime('now')    
+-------------------
+2011-06-09 09:04:08
+sqlite> select strftime('%d-%m-%y');
+strftime('%d-%m-%y')
+--------------------
+                    
+sqlite> create table constraints(id int unique, name varchar(20),check(price>250),age int not null,information text default 'new person')
+   ...> ;
+Error: near "age": syntax error
+sqlite> create table constraints(id int unique, name varchar(20),check(price>250),age int not null,information text default 'new person')
+   ...> ;
+Error: near "age": syntax error
+sqlite> create table constraints(id int unique, name varchar(20),check(price>250),age integer not null,information text default 'new person')
+   ...> ;
+Error: near "age": syntax error
+sqlite> create table constraints(id int unique, name varchar(20),price int check(price>250),age int not null,information text default 'new person')
+   ...> ;
+sqlite> insert into constraints(1,'sriram',250,25);
+Error: near "1": syntax error
+sqlite> insert into constraints(1,'sriram',251,25);
+Error: near "1": syntax error
+sqlite> insert into constraints values (1,'sriram',251,25);
+Error: table constraints has 5 columns but 4 values were supplied
+sqlite> insert into constraints values (1,'sriram',251,25,'hi');
+sqlite> insert into constraints values (1,'sachin',201,23,'hi');
+Error: constraint failed
+sqlite> insert into constraints values (2,'sachin',201,23,'hi');
+Error: constraint failed
+sqlite> insert into constraints values (2,'sachin',291,23,'hi');
+sqlite> insert into constraints values (3,'dhoni',251,26,'great');
+sqlite> select * from constraints
+   ...> ;
+id          name        price       age         information
+----------  ----------  ----------  ----------  -----------
+1           sriram      251         25          hi         
+2           sachin      291         23          hi         
+3           dhoni       251         26          great      
+sqlite> select upper('sriram')
+   ...> ;
+upper('sriram')
+---------------
+SRIRAM         
+sqlite> select upper(name) as 'names in capital' rom constraints;
+Error: near "rom": syntax error
+sqlite> select upper(name) as 'names in capital' from constraints;
+names in capital
+----------------
+SRIRAM          
+SACHIN          
+DHONI           
+sqlite> select count(*) as 'no of rows' from constraints;
+no of rows
+----------
+3         
+sqlite> select count(id) as'no of rows' from constraints;
+no of rows
+----------
+3         
+sqlite> select count(name) as'no of rows' from constraints;
+no of rows
+----------
+3         
+sqlite> select sum(price as 'sum of price' from costraints;
+Error: near "as": syntax error
+sqlite> select sum(price) as 'sum of price' from constraints;
+sum of price
+------------
+793         
+sqlite> select avg(price) as 'sum of price' from constraints;
+sum of price    
+----------------
+264.333333333333
+sqlite> select   strftime('%d-%m-%y');
+strftime('%d-%m-%y')
+--------------------
+
+nyros@nyros-desktop:~$ sqlite3 test.db;
+SQLite version 3.6.22
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .tables
+books              college            train_reservation
+bus_reservation    constraints      
+sqlite> create view as select bus_name,from_station,price from bus_reservation;
+Error: near "as": syntax error
+sqlite> create view myview as select bus_name,from_station,price from bus_reservation;
+sqlite> select * from myview;
+super delux|kakinada|450
+garuda|kakinada|800
+garuda|kakinada|2500
+sqlite> .mod column
+sqlite> ;
+sqlite> 
+sqlite> 
+sqlite> .mode column
+sqlite> .headers on
+sqlite> select * from myview;
+bus_name     from_station  price     
+-----------  ------------  ----------
+super delux  kakinada      450       
+garuda       kakinada      800       
+garuda       kakinada      2500      
+sqlite> create view myview as select * from bus_reservation where price>251;
+Error: table myview already exists
+sqlite> create view myview1 as select * from bus_reservation where price>251;
+sqlite> select * from myview1;
+id          bus_name     from_station  destination   price     
+----------  -----------  ------------  ------------  ----------
+120         super delux  kakinada      secunderabad  450       
+121         garuda       kakinada      Banglore      800       
+122         garuda       kakinada      varanasi      2500      
+sqlite> update myvuew set price=460 where id=120;
+Error: no such table: myvuew
+sqlite> update myview set price=460 where id=120;
+Error: cannot modify myview because it is a view
+sqlite> CREATE TABLE Log(Id integer PRIMARY KEY, OldName text, NewName text, Date text);
+sqlite> insert into log values (1,"sriram","Ram","2011-05-06");
+sqlite> insert into log values (2,"johncena","randyorton","2010-11-16");
+sqlite> insert into log values (3,"reymestreo","sincara","2008-02-03");
+sqlite> select * from log;
+Id          OldName     NewName     Date      
+----------  ----------  ----------  ----------
+1           sriram      Ram         2011-05-06
+2           johncena    randyorton  2010-11-16
+3           reymestreo  sincara     2008-02-03
+
+
+

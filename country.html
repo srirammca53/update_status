@@ -1,0 +1,51 @@
+<html>
+<head>
+
+
+<script language="javascript">
+
+
+
+function fill_Cities(i){
+var i;
+var form1 = document.getElementById("form1a");
+document.form1aa.states.options.length=0;
+switch(i)
+{
+case 0:
+form1.states.options[0] =new Option('calcutta','calcutta');
+form1.states.options[1] =new Option('Delhi','Delhi');
+form1.states.options[2] =new Option('Bombay','Bombay');
+break;
+case 1:
+form1.states.options[0] =new Option('Washington','Washington');
+form1.states.options[1] =new Option('New York','New York');
+form1.states.options[2] =new Option('California','California');
+break;
+case 2:
+form1.states.options[0] =new Option('MelBourn','MelBourn');
+form1.states.options[1] =new Option('Sidney','Sidney');
+form1.states.options[2] =new Option('Perth','Perth');
+}
+}
+function calling()
+{
+fill_Cities();
+}
+
+</script>
+
+</head>
+<body>
+<form name="form1aa" method="post" action="" id="form1a" >
+<select name="country" onchange=" fill_Cities (document.form1aa.country.selectedIndex); ">
+<option value="India">India</option>
+<option value="U.S.A">U.S.A</option>
+<option value="Australia">Australia</option>
+</select>
+<select name="states">
+</select>
+<input type="button" value="submit" onsubmit="calling()">
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<%= form_for(@emp) do |f| %>
+  
+<% if @emp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emp.errors.count, "error") %> prohibited this dairy from being saved:</h2>
+
+      <ul>
+      <% @emp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= f.label :empname %>
+    <%= f.text_field :empname %>
+  </div><br>
+
+<div>
+   <%= f.label :empdepartment %>
+    <%= f.select "empdepartment", options_for_select([ "Ruby on Rails",".net","php","cis","web designers"], "select department") %>
+  </div>
+ <div>
+  <%= label_tag(:date, "date:") %>
+  <%= text_field :date, :date %>
+  </div>
+ <br>
+
+<br>
+<div>
+<%= f.label(:present, "present") %>
+<%= f.check_box(:present) %>
+</div>
+<div>
+<%= f.label(:late, "late") %>
+<%= f.check_box(:late) %>
+</div>
+<div>
+<%= f.label(:absent, "absent") %>
+<%= f.check_box(:absent) %>
+</div>
+ 
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

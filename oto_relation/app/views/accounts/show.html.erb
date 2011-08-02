@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @account.name %>
+</p>
+
+<p>
+  <b>Account no:</b>
+  <%= @account.account_no %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @account.age %>
+</p>
+<h2>Credits</h2>
+<%= render :partial => "credit/credit",
+           :member => @account.credit %>
+ <%#= link_to "credit", new_credit_path(@credit) %>
+<h2>Add a credit:</h2>
+<%= render "credit/new" %>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

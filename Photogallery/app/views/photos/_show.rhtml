@@ -1,0 +1,8 @@
+<div id="mask" style="display: none"></div>
+<div id="photo-wrapper" style="display: none;">
+  <img id="photo" onclick="Photo.hide();" src="" />
+  <div id="nav">
+    <%= link_to_function "#{image_tag 'arrow_left'} Previous", "Photo.prev()" %>
+    <%= link_to_function "Next #{image_tag 'arrow_right'}", "Photo.next()" %>
+  </div>
+</div>

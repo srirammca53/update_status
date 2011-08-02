@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Animator_name: MyString
+  Animator_age: 1
+  Animator_salary: 
+
+two:
+  Animator_name: MyString
+  Animator_age: 1
+  Animator_salary: 

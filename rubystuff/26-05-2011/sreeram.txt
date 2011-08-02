@@ -1,0 +1,6 @@
+Name:sriram
+Age:24
+Qualification:MCA
+Income:25000
+Your result is
+you are a Master Degree Holder

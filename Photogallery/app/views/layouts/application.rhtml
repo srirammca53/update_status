@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	  <title><%= SITE_TITLE %></title>
+		<%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+	</head>
+
+	<body>
+
+		<div id="utility">
+			<% if logged_in? %>
+				<%= link_to "Sign out", session_url(:id => session.session_id), :method => :delete %>
+			<% else%>
+				<%= link_to_function "Sign in", "Element.toggle('signin','signin_link')", :id => "signin_link" %>
+				<%= form_tag sessions_url, :id => "signin", :style => "display: none" %>
+					Username <%= text_field_tag 'username' %>
+					Password <%= text_field_tag 'password' %>
+					<%= submit_tag "Sign in"%>
+				<%= end_form_tag %>
+			<% end %>
+		</div>
+
+		<h1><%= link_to SITE_TITLE, home_url %></h1>
+
+		<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+
+		<%= yield %>
+
+	</body>
+	
+</html>

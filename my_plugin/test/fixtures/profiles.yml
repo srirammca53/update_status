@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  age: 1
+  qualification: MyString
+  address: MyText
+  designation: MyString
+  salary: MyString
+  about_yourself: MyText
+
+two:
+  name: MyString
+  age: 1
+  qualification: MyString
+  address: MyText
+  designation: MyString
+  salary: MyString
+  about_yourself: MyText

@@ -1,0 +1,8 @@
+<% users = User.find(:all, :conditions => ["id!=?", current_user.id]) %>
+<% if users.any? %>
+	<ul id="statuses">
+		<% users.each do |user| %>
+			<li <% if user.inactive? %>class="inactive"<% end %>><%= link_to user.short_name, user_url(:id => user.id) %><span><%=h user.status %></span></li>
+		<% end %>
+	</ul>
+<% end %>

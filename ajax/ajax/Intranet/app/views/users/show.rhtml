@@ -1,0 +1,20 @@
+<div id="form_container" <% if @edit_on %>class="active"<% end %>>
+  <div id="cancel_link"><%= link_to_function "Cancel", "PostForm.toggle()", :class => 'delete small' %></div>
+  <div id="new_link"><% if can_edit? @user %><span>&nbsp;&nbsp;</span><%= link_to_function "Edit", "PostForm.toggle()", :class => 'create' %><% end %></div>
+  <%= render :partial => 'form' %>
+  <div id="detail">
+    <div id="change_picture">
+      <%= image_tag formatted_user_url(:id => @user, :format => 'jpg'), :class => 'user_picture', :alt => @user.name %>
+      <p><%= link_to_function 'Change Picture', "$('picture_form').toggle()" %></p>
+      <form id="picture_form" style="display: none;" method="post" enctype="multipart/form-data" action="<%= url_for(:action => 'show') %>">
+        <fieldset>
+          <input type="hidden" name="_method" value="put" />
+          <input type="file" name="user[file]" /> <input type="submit" value="Upload" />
+        </fieldset>
+      </form>
+    </div>
+    <p><strong>Email:</strong> <%= @user.email %></p>
+    <% unless @user.phone.blank? %><p><strong>Phone:</strong> <%= @user.phone %></p><% end %>
+    <p><%= @user.address %><br/><%= @user.city %><% unless @user.city.blank? %>, <% end %><%= @user.state %> <%= @user.zip %></p>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+class Quiz < ActiveRecord::Base
+  has_many :questions, :order => 'position', :dependent => :destroy do
+    def unmissed right_keys
+      find :all, :conditions => (right_keys.blank? ? nil : "id not in (#{right_keys})"), :limit => 5
+    end
+  end
+           
+  def self.recent
+    find :all, :limit => 5, :order => "created_at desc"
+  end
+end

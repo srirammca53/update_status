@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3023"
+   name=""
+   committed-date="2006-08-14T01:28:16.305963Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/public"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="2855"
+   name="dispatch.cgi"
+   text-time="2006-02-01T22:20:41.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="c90fe303c91b4b6e5232e9351f5646e2"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2855"
+   name="dispatch.rb"
+   text-time="2006-02-01T22:20:41.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="c90fe303c91b4b6e5232e9351f5646e2"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="2855"
+   name="dispatch.fcgi"
+   text-time="2006-02-01T22:20:41.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="84228cf80b90c3c335bfb9f679e59351"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2855"
+   name="robots.txt"
+   text-time="2006-02-01T22:20:41.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="a9d8217ec04c304aba7926ae1f066973"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   committed-rev="2983"
+   name="500.html"
+   text-time="2006-06-15T18:00:00.000000Z"
+   committed-date="2006-06-15T20:00:36.827897Z"
+   checksum="6e08d6d1f55c99e94b495679134a9eaf"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"/>
+<entry
+   name="javascripts"
+   kind="dir"/>
+<entry
+   committed-rev="2855"
+   name="404.html"
+   text-time="2006-06-15T17:59:50.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="1248392955936f5d9142da8f66c5b46b"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:41.000000Z"/>
+<entry
+   committed-rev="2855"
+   name=".htaccess"
+   text-time="2006-02-01T22:20:41.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="eebf5d1e0a663f298d77013224f03e4f"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:41.000000Z"/>
+<entry
+   name="stylesheets"
+   kind="dir"/>
+<entry
+   committed-rev="2855"
+   name="favicon.ico"
+   text-time="2006-02-01T22:20:41.000000Z"
+   committed-date="2006-02-01T22:20:09.766136Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:41.000000Z"/>
+</wc-entries>

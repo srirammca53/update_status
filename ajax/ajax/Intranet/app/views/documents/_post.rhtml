@@ -1,0 +1,8 @@
+<div class="post">
+  <div class="body no_user">
+    <img src="/images/icon_<%= icon_for(post.attachment_content_type) %>_big.gif" class="icon" alt="Icon" />
+    <h4><%= link_to post.name, :action =>  post.attachment_id.nil? ? 'show' : 'download', :id => post %></h4>
+    <p class="meta"><span class="comments"><%= link_to pluralize(post.comments_count, 'comment'), :action => 'show', :id => post %></span><%= description_of post.attachment_content_type %> <%= link_to 'Edit', :action => 'edit', :id => post %></p>
+  </div>
+  <%= clear_div %>
+</div>

@@ -1,0 +1,7 @@
+<div class="post">
+	<div class="body no_user">
+		<h4><%= link_to post.name, :action => 'show', :id => post %></h4>
+		<p class="meta"><span class="comments"><%= link_to pluralize(post.comments_count, 'comment'), :action => 'show', :id => post %></span><%= post.start_date.strftime "%a, %b %d" %></p>
+	</div>
+	<%= clear_div %>
+</div>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3031"
+   name=""
+   committed-date="2006-08-15T02:32:39.029882Z"
+   url="http://redgreenblu.com/svn/work/quiz/app/controllers"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3033"/>
+<entry
+   committed-rev="3038"
+   name="quizzes_controller.rb"
+   text-time="2006-08-17T17:39:14.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="a93af8b147cef141e53aee156f28c8bd"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   name="questions_controller.rb"
+   kind="file"
+   deleted="true"
+   revision="3037"/>
+<entry
+   committed-rev="3037"
+   name="application.rb"
+   text-time="2006-08-16T21:33:50.000000Z"
+   committed-date="2006-08-17T01:02:53.050544Z"
+   checksum="1fe3be5816b24ae8f37e1f38843e3ea9"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:05.000000Z"
+   revision="3037"/>
+<entry
+   name="answers_controller.rb"
+   kind="file"
+   deleted="true"
+   revision="3037"/>
+</wc-entries>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3024"
+   name=""
+   committed-date="2006-08-14T01:31:02.092173Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/app/helpers"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3024"/>
+<entry
+   committed-rev="3024"
+   name="contacts_helper.rb"
+   text-time="2006-08-13T19:03:04.000000Z"
+   committed-date="2006-08-14T01:31:02.092173Z"
+   checksum="75f3d95c4c52ebbfdb0778a3f42b47b9"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2989"
+   name="documents_helper.rb"
+   text-time="2006-06-30T03:08:23.000000Z"
+   committed-date="2006-06-30T04:13:11.192554Z"
+   checksum="f94a50a866403f70d151c87f4d164888"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2989"
+   name="users_helper.rb"
+   text-time="2006-08-13T02:38:49.000000Z"
+   committed-date="2006-06-30T04:13:11.192554Z"
+   checksum="9e83a0b117a3e96aa9f00ace008d13a3"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3028"
+   name="application_helper.rb"
+   text-time="2006-08-14T16:16:13.000000Z"
+   committed-date="2006-08-14T17:08:24.669817Z"
+   checksum="0c9dd5d7706797b26cbb07b424db1711"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-02-01T22:20:40.000000Z"
+   revision="3028"/>
+<entry
+   committed-rev="2990"
+   name="comments_helper.rb"
+   text-time="2006-06-30T04:31:16.000000Z"
+   committed-date="2006-06-30T04:43:33.329319Z"
+   checksum="c1e30b29cd2443adb68c2272c09d3b39"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2993"
+   name="sessions_helper.rb"
+   text-time="2006-07-08T00:39:44.000000Z"
+   committed-date="2006-07-08T03:24:31.899587Z"
+   checksum="f55f635d09b0327ffc89515e294893b1"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2989"
+   name="messages_helper.rb"
+   text-time="2006-06-30T03:08:37.000000Z"
+   committed-date="2006-06-30T04:13:11.192554Z"
+   checksum="9d049f5494de08412e27349ab6965cbe"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2989"
+   name="posts_helper.rb"
+   text-time="2006-06-30T03:08:52.000000Z"
+   committed-date="2006-06-30T04:13:11.192554Z"
+   checksum="9184b30a7010cd9709a37709298f8ad0"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="3024"
+   name="projects_helper.rb"
+   text-time="2006-08-13T18:49:33.000000Z"
+   committed-date="2006-08-14T01:31:02.092173Z"
+   checksum="0057a1e30ca48c88df012731a289eeb7"
+   last-author="scottr"
+   kind="file"/>
+<entry
+   committed-rev="2989"
+   name="plans_helper.rb"
+   text-time="2006-06-30T03:08:42.000000Z"
+   committed-date="2006-06-30T04:13:11.192554Z"
+   checksum="58abdd10f4835ef7b1c83fc009b95717"
+   last-author="scottr"
+   kind="file"/>
+</wc-entries>

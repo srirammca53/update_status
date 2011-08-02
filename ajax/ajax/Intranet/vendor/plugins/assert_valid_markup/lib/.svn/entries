@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3026"
+   name=""
+   committed-date="2006-08-14T01:34:42.031136Z"
+   url="http://redgreenblu.com/svn/work/intranet/trunk/vendor/plugins/assert_valid_markup/lib"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3026"/>
+<entry
+   committed-rev="3026"
+   name="assert_valid_markup.rb"
+   text-time="2006-08-14T01:34:14.000000Z"
+   committed-date="2006-08-14T01:34:42.031136Z"
+   checksum="2fea917541e0ba46473e6f35de75c554"
+   last-author="scottr"
+   kind="file"/>
+</wc-entries>

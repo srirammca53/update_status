@@ -1,0 +1,50 @@
+Odesk : You need to login as kkris / bwdfk2334 , company : Igraph (comgraph)
+
+IP: 184.106.81.199
+user: root
+pass: slice6391267KviF6Q1f
+
+https://manage.slicehost.com/
+email: mike.mayer@industrygraph.com
+password: 1123Broadway
+
+domains managemnet:
+https://access.enom.com/
+Domain : conversati.com
+Password : 2j7k5p93tvg6ejt1
+
+
+sudo aptitude remove ruby
+
+sudo apt-get install libxml2 libxml2-dev libxslt-dev libssl-dev
+
+
+
+
+ 
+Syntax error on line 40 of /etc/apache2/sites-enabled/000-default:
+Invalid command 'RailsEnv', perhaps misspelled or defined by a module not included in the server configuration [fail]
+
+
+
+
+
+rm -R biocatalogue
+
+http://wiki.railsmachine.com/UpgradingRuby
+http://www.linuxmonk.org/2009/01/31/installing-ruby-on-rails-in-ubuntu-804hardy/
+http://ftp.ruby-lang.org/pub/ruby/1.8/
+http://stackoverflow.com/questions/4601003/how-to-downgrade-from-ruby-1-9-2-to-ruby-1-8-7-to-run-rails-2-0-2
+http://snippets.dzone.com/posts/show/5899
+http://snipplr.com/view/875/command-line-instructions-to-create-a-database-in-mysql/
+
+
+
+
+
+
+
+redmine
+sudo apt-get install libapache2-mod-passenger 
+http://www.samontab.com/web/2011/04/how-to-install-redmine-1-1-2-on-ubuntu-server-10-04/
+

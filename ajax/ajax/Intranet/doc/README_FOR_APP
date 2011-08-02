@@ -1,0 +1,19 @@
+= Ajax on Rails Intranet
+
+by Scott Raymond for the book "Ajax on Rails", published by O'Reilly Media.
+
+See here for information on O'Reilly's policy for code reuse:
+http://www.oreilly.com/pub/a/oreilly/ask_tim/2001/codepolicy.html
+
+== Ideas for improvement
+- search
+- feeds
+- caching
+- acts as versioned/paranoid
+- export/backup
+- i18n
+- tags
+- API
+- site-customization plugin
+- store dates as UTC
+- generator for new post types

@@ -1,0 +1,25 @@
+
+  <h3>Foobars!</h3>
+  <table>
+    <tr>
+      <th>Foo</th>
+      <th>Bar</th>
+      <th>Which?</th>
+      <th>Links</th>
+    </tr>
+  <% for foobar in @foobars do %>
+    <% idstring = "foobar-" + foobar.id.to_s %>
+    <tr>
+      <td><%= foobar.foo %></td>
+      <td><%= foobar.bar %></td>
+      <td id="<%= idstring %>"></td>
+      <td>
+        <%= link_to "Foo", :url =>{ :action => :set, :updatewith => foobar.foo }, 
+                                     :update => idstring, :remote => true %> 
+          
+        <%= link_to "Bar", :url =>{ :action => :set, :updatewith => foobar.bar }, 
+                                     :update => idstring, :remote => true %>
+      </td>
+    </tr>
+  <% end %>
+  </table>

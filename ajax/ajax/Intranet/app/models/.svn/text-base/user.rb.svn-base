@@ -1,0 +1,32 @@
+class User < ActiveRecord::Base
+
+	has_many   :posts, :foreign_key => "created_by", :dependent => :destroy
+	belongs_to :picture, :class_name => 'Attachment', :foreign_key => 'picture_id', :dependent => :destroy
+
+  validates_length_of       :password, :email, :within => 4..100
+  validates_uniqueness_of   :email
+	validates_format_of       :email, :with => /^(([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,}))?$/
+
+  def self.authenticate(email, password)
+    find_by_email_and_password(email, password)
+  end
+
+	def first_name; name.split.first; end
+	def last_name; name.split.last; end
+	def short_name; "#{first_name} #{last_name[0,1]}."; end
+
+  # Makes an attachment from a thumbnail upload
+	def file= file
+	  if !(file.size == 0)
+	    picture = Attachment.new 'content' => file.read
+	    picture.save
+	    write_attribute 'picture_id', picture.id
+	  end
+	end
+	
+	# n.b, the status heartbeat updates last_active every 30 seconds
+	def inactive?
+	  last_active < 1.minute.ago rescue true
+	end
+
+end

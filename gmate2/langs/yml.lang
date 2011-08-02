@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Autor: José Carrión - joseloc@gmail.com
+	Web: http://www.nationcode.com
+	Blog: http://blog.nationcode.com
+-->
+<language id="yaml" _name="Yaml" version="2.0" _section="Markup">
+
+	<metadata>
+	  <property name="mimetypes">text/x-yaml</property>
+	  <property name="globs">*.yml</property>
+    <property name="line-comment-start">#</property>
+	</metadata>
+
+  <styles>
+
+    <style id="escape"               _name="Escaped Character"     map-to="def:special-char"/>
+    <style id="comment"              _name="Comment"               map-to="def:comment"/>
+    <style id="attribute-definition" _name="Attribute Definition"  map-to="def:statement"/>
+    <style id="module-handler"       _name="Module handler"        map-to="def:preprocessor"/>
+    <style id="keyword"              _name="Keyword"               map-to="def:keyword"/>
+    <style id="nil-value"            _name="Nil Constant"          map-to="def:special-constant"/>
+    <style id="boolean"              _name="Boolean value"         map-to="def:boolean"/>
+    <style id="floating-point"       _name="Floating point number" map-to="def:floating-point"/>
+    <style id="decimal"              _name="Decimal number"        map-to="def:decimal"/>
+    <style id="base-n-integer"       _name="Base-N number"         map-to="def:base-n-integer"/>
+    <style id="numeric-literal"      _name="Numeric literal"       map-to="def:base-n-integer"/>
+    <style id="string"               _name="String"                map-to="def:string"/>
+    <style id="builtin"              _name="Builtin"               map-to="def:type"/>
+    <style id="constant"             _name="Constant"              map-to="def:type"/>
+    <style id="symbol"               _name="Symbol"                map-to="def:symbol"/>
+    <style id="special-variable"     _name="Special Variable"      map-to="def:identifier"/>
+    <style id="predefined-variable"  _name="Predefined Variable"   map-to="def:identifier"/>
+    <style id="variable"             _name="Variable"              map-to="def:identifier"/>
+    <style id="here-doc"             _name="Heredoc"               map-to="def:string" />
+    <style id="here-doc-bound"       _name="Heredoc Bound"         map-to="def:string"/>
+    <style id="regex"                _name="Regular Expression"    map-to="def:identifier"/>
+
+  </styles>
+
+  <definitions>
+
+		<context id="yaml">
+    	<include>
+				<context ref="string"/>
+				<context ref="line-comment"/>
+				<context ref="string-2"/>
+				<context ref="key"/>
+				<context ref="list-item"/>
+				<context ref="inner-key"/>
+				<context ref="scalar-value"/>
+			</include>
+		</context>
+
+    <context id="line-comment" style-ref="comment" end-at-line-end="true">
+      <start>#</start>
+      <include>
+        <context ref="def:in-comment"/>
+      </include>
+    </context>
+
+    <context id="escape" style-ref="escape">
+      <match>\\((0-7){3}|(x[a-fA-F0-9]{2})|(c\S)|([CM]-\S)|(M-C-\S)|.)</match>
+    </context>
+
+    <context id="string" style-ref="string">
+      <start>"</start>
+      <end>"</end>
+      <include>
+        <context ref="def:escape"/>
+        <context ref="def:line-continue"/>
+      </include>
+    </context>
+
+    <context id="string-2" style-ref="string">
+      <start>'</start>
+      <end>'</end>
+    </context>
+
+    <context id="scalar-value">
+      <match>\w*</match>
+    </context>
+
+    <context id="list-item" style-ref="regex">
+      <match>^[\w_]*:</match>
+    </context>
+
+    <context id="key" style-ref="keyword">
+      <match>^[\w_]*:</match>
+    </context>
+
+    <context id="inner-key" style-ref="variable">
+      <match>\W[\w_]*:</match>
+    </context>
+
+  </definitions>
+
+</language>

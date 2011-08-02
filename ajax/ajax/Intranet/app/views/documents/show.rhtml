@@ -1,0 +1,16 @@
+<div id="form_container" <% if @edit_on %>class="active"<% end %>>
+  <div id="cancel_link"><%= link_to_function "Cancel", "PostForm.toggle()", :class => 'delete small' %></div>
+  <div id="new_link"><% if can_edit? @post %><span>&nbsp;&nbsp;</span><%= link_to_function "Edit", "PostForm.toggle()", :class => 'create' %><% end %></div>
+  <div id="meta">Posted <%= distance_of_time_in_words_to_now(@post.created_at) %> ago by <%= link_to @post.creator.name, user_url(:id => @post.creator), { 'class' => 'grey' } %></div>
+  <%= render :partial => 'form' %>
+  <div id="detail">
+    <% if @post.attachment_id %>
+      <img src="/images/icon_<%= icon_for(@post.attachment_content_type) %>_big.gif" class="icon" alt="Icon" />
+      <h4><%= link_to @post.name, :action => 'download' %></h4>
+      <p class="meta"><%= description_of @post.attachment_content_type %></p>
+    <% end %>
+    <%= simple_format(@post.body) if @post.body.any? %>
+  </div>
+</div>
+
+<%= render :partial => "comments/comments", :comments => @post.comments %>

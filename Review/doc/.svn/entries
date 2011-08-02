@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3031"
+   name=""
+   committed-date="2006-08-15T02:32:39.029882Z"
+   url="http://redgreenblu.com/svn/work/quiz/doc"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3033"/>
+<entry
+   committed-rev="3037"
+   name="README_FOR_APP"
+   text-time="2006-08-17T01:00:21.000000Z"
+   committed-date="2006-08-17T01:02:53.050544Z"
+   checksum="12a8713b6b448616afaa38fe3c6f8afd"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-15T02:33:06.000000Z"
+   revision="3037"/>
+</wc-entries>

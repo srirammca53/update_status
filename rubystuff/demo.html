@@ -1,0 +1,25 @@
+    <body>
+       <form name="Upload" enctype="multipart/form-data" method="post">
+           Filename: <INPUT type="file" id="submit">
+           <INPUT type="button" id="send" value="Upload">
+       </form>
+       <div 
+           id="div" 
+           align="center" 
+           style="height: 200px;width: 500px;border-style: ridge;border-color: red">
+       </div>
+    </body>
+
+    <script type="text/javascript">
+        var img_id=0
+        var image = new Array()
+        document.getElementById('send').onclick=function()
+        {
+            img_id++
+            var id="imgid"+img_id
+            image = document.getElementById('submit').value;
+            document.getElementById('div').innerHTML="<img id='"+id+"' src='"+image+"' width=500px height=200px>"
+        }
+    </script>
+</html>
+

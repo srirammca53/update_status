@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3041"
+   name=""
+   committed-date="2006-08-18T02:06:08.916381Z"
+   url="http://redgreenblu.com/svn/work/gallery"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   name="test"
+   kind="dir"/>
+<entry
+   committed-rev="3048"
+   name="project.tmproj"
+   text-time="2006-08-19T23:09:15.000000Z"
+   committed-date="2006-08-19T23:09:57.356791Z"
+   checksum="d140045ff038fff665e45a28c5eb15f3"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:00.000000Z"
+   revision="3048"/>
+<entry
+   name="app"
+   kind="dir"/>
+<entry
+   name="log"
+   kind="dir"/>
+<entry
+   committed-rev="3039"
+   name="Rakefile"
+   text-time="2006-08-18T02:05:03.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="17f2f134da4cd31ea095d5868ca89e86"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:00.000000Z"/>
+<entry
+   name="db"
+   kind="dir"/>
+<entry
+   name="components"
+   kind="dir"/>
+<entry
+   name="vendor"
+   kind="dir"/>
+<entry
+   name="tmp"
+   kind="dir"/>
+<entry
+   name="script"
+   kind="dir"/>
+<entry
+   name="doc"
+   kind="dir"/>
+<entry
+   name="config"
+   kind="dir"/>
+<entry
+   name="lib"
+   kind="dir"/>
+<entry
+   committed-rev="3044"
+   name="MIT-LICENSE"
+   text-time="2006-08-18T17:51:28.000000Z"
+   committed-date="2006-08-18T18:31:13.602971Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="scottr"
+   kind="file"
+   revision="3044"/>
+<entry
+   name="public"
+   kind="dir"/>
+</wc-entries>

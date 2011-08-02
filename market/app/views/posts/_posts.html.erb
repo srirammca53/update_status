@@ -1,0 +1,19 @@
+<table>
+  <tbody><tr>
+    <th>Title</th>
+    <th>Content</th>
+  </tr>
+  
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <td><%= link_to 'Show', post %></td>
+      <td><%= link_to "Edit", edit_post_path(post), :remote => true %></td>
+      <td><%= link_to "Destroy", post, :remote => true, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  
+  </tbody>
+</table>
+

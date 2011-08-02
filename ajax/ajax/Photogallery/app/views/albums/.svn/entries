@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3042"
+   name=""
+   committed-date="2006-08-18T05:19:50.962521Z"
+   url="http://redgreenblu.com/svn/work/gallery/app/views/albums"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3042"/>
+<entry
+   name="_photos.rhtml"
+   kind="file"
+   deleted="true"
+   revision="3047"/>
+<entry
+   committed-rev="3048"
+   name="show.rhtml"
+   text-time="2006-08-19T21:22:02.000000Z"
+   committed-date="2006-08-19T23:09:57.356791Z"
+   checksum="e5f30716362eac2ca9b0f53377b231ad"
+   last-author="scottr"
+   kind="file"
+   revision="3048"/>
+<entry
+   name="edit.rhtml"
+   kind="file"
+   deleted="true"
+   revision="3045"/>
+<entry
+   committed-rev="3048"
+   name="index.rhtml"
+   text-time="2006-08-19T22:00:12.000000Z"
+   committed-date="2006-08-19T23:09:57.356791Z"
+   checksum="cc9069ce5645e459c4b05397070355c0"
+   last-author="scottr"
+   kind="file"
+   revision="3048"/>
+<entry
+   name="new.rhtml"
+   kind="file"
+   deleted="true"
+   revision="3045"/>
+</wc-entries>

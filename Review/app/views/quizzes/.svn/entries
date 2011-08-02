@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3034"
+   name=""
+   committed-date="2006-08-15T07:09:26.718116Z"
+   url="http://redgreenblu.com/svn/work/quiz/app/views/quizzes"
+   last-author="scottr"
+   kind="dir"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3034"/>
+<entry
+   committed-rev="3038"
+   name="_edit_question.rhtml"
+   text-time="2006-08-17T16:58:14.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="9324519ea1a6c7e856d9287043456b6c"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   committed-rev="3038"
+   name="create_q.rjs"
+   text-time="2006-08-17T02:06:59.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="1fd4ea263d0aa34dd7085817de4f2e47"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   committed-rev="3038"
+   name="show.rhtml"
+   text-time="2006-08-17T17:51:34.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="efb116f6841dbeec369a505955585a6f"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   committed-rev="3038"
+   name="_scoreboard.rhtml"
+   text-time="2006-08-17T17:50:52.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="197c287535775a7b66572cac404747ab"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   committed-rev="3038"
+   name="edit.rhtml"
+   text-time="2006-08-17T17:51:57.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="ba29e9706c3fce48ee164f5c9f7df771"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   committed-rev="3038"
+   name="_question.rhtml"
+   text-time="2006-08-17T17:50:20.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="84a0eb3beb54d4c2bde8b53c383e4cfa"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   committed-rev="3038"
+   name="index.rhtml"
+   text-time="2006-08-17T16:58:51.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="1e49e78d56081eff4265bcb4fabae897"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+<entry
+   committed-rev="3038"
+   name="answer.rjs"
+   text-time="2006-08-17T17:46:26.000000Z"
+   committed-date="2006-08-17T18:25:56.998102Z"
+   checksum="8bf8b7f6864c1f9c01b95272d1121041"
+   last-author="scottr"
+   kind="file"
+   revision="3038"/>
+</wc-entries>

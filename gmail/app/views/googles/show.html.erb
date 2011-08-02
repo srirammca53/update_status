@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @google.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @google.password %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @google.age %>
+</p>
+
+
+<%= link_to 'Edit', edit_google_path(@google) %> |
+<%= link_to 'Back', googles_path %>

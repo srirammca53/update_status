@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	  <title><%= $SITE_TITLE + (page_title.blank? ? '' : " - #{page_title}") %></title>
+		<%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+	</head>
+
+	<body class="<%= params[:controller] %>">
+		<%= flash_div :system_announcement %>
+		<div id="header">
+			<h1><%= link_to $SITE_TITLE, home_url %></h1>
+			<% if logged_in? %>
+  			<div id="account">Signed in as <%= link_to current_user.first_name, user_url(:id => current_user), :class => 'strong stealth' %><br/><%= link_to 'Settings', edit_user_url(:id => current_user), :class => 'small subtle' %> <%= link_to 'Sign Out', session_url(:id => session.session_id), :method => :delete, :class => 'small delete' %></div>
+    		<ul id="nav">
+  		  	<li id="messages"><%= link_to "Messages", messages_url %></li>
+  		  	<li id="plans"><%= link_to "Event Plans", plans_url %></li>
+  		  	<li id="documents"><%= link_to "Documents", documents_url %></li>
+  		  	<li id="projects"><%= link_to "Projects", projects_url %></li>
+  		  	<li id="contacts"><%= link_to "Contacts", contacts_url %></li>
+    		</ul>
+  		<% end %>
+		</div>
+
+		<div id="utility">
+			<%= flash_div :notice %>
+			<% if logged_in? %>
+				<div id="status">
+					<ul><li><%= link_to current_user.short_name, user_url(:id => current_user) %><span id="my_status"><%= current_user.status.blank? ? "(none)" : current_user.status %></span></li></ul>
+					<%= javascript_tag "new Ajax.InPlaceEditor('my_status', '#{user_url(:id => current_user)}', {loadTextURL:'#{status_user_url(:id => current_user)}', ajaxOptions:{method:'put'}, callback:function(form, value){ return 'user[status]='+escape(value); }});" %>
+					<%= render :partial => "users/statuses" %>
+					<%= javascript_tag "new PeriodicalExecuter(function(){ new Ajax.Updater('statuses', '#{statuses_users_url}', {method:'get'}); }, 30)" %>
+				</div>
+			<% end %>
+		</div>
+		
+		<div id="main">
+			<%= flash_div :warning %>
+			<%= content_tag :h2, page_title %>
+			<%= yield %>
+		</div>
+				
+	</body>
+</html>

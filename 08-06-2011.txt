@@ -1,0 +1,325 @@
+postgres=# select max(temp) from climate;
+  max  
+-------
+ 45.25
+(1 row)
+
+postgres=# select max(temp) from climate where temp not in (select max(temp) from climate);
+  max  
+-------
+ 30.25
+(1 row)
+
+postgres=# update climate set city ='banglore' where season='s';
+UPDATE 1
+postgres=# update climate set city ='Delhi' where season='winter';
+UPDATE 1
+postgres=# update climate set city ='Hyderabad' where season='rainy';
+UPDATE 1
+postgres=# update climate set city ='varanasi' where season='spring';
+UPDATE 1
+postgres=# select * from climate
+postgres-# ;
+ season | temp  |    data    |   city    
+--------+-------+------------+-----------
+ s      | 45.25 | 2011-05-06 | banglore
+ winter | 25.25 | 2011-12-18 | Delhi
+ rainy  | 30.25 | 2011-09-12 | Hyderabad
+ spring | 26.25 | 2012-03-09 | varanasi
+(4 rows)
+
+postgres=# select * from climate inner join cities on (climate.season = cities.city);
+ season | temp | data | city | city | type | pin 
+--------+------+------+------+------+------+-----
+(0 rows)
+
+postgres=# select * from cities;
+   city    |    type     |  pin   
+-----------+-------------+--------
+ hyderabad | metro       | 500008
+ Vizag     | 2 tier city | 500025
+ kakinads  | normal city | 500565
+(3 rows)
+
+
+postgres=# update cities set city='Hyderabad' where pin=500008;
+UPDATE 1
+postgres=# select * from cities;
+   city    |    type     |  pin   
+-----------+-------------+--------
+ Vizag     | 2 tier city | 500025
+ kakinads  | normal city | 500565
+ Hyderabad | metro       | 500008
+(3 rows)
+
+postgres=# select * from climate inner join cities on (climate.season = cities.city);
+ season | temp | data | city | city | type | pin 
+--------+------+------+------+------+------+-----
+(0 rows)
+
+postgres=# select * from climate inner join cities on (climate.city = cities.city);
+ season | temp  |    data    |   city    |   city    | type  |  pin   
+--------+-------+------------+-----------+-----------+-------+--------
+ rainy  | 30.25 | 2011-09-12 | Hyderabad | Hyderabad | metro | 500008
+(1 row)
+
+postgres=# select * from climate outer join cities on (climate.city = cities.city);
+ERROR:  syntax error at or near "outer"
+LINE 1: select * from climate outer join cities on (climate.city = c...
+                              ^
+postgres=# select * from climate full join cities on (climate.city = cities.city);
+ season | temp  |    data    |   city    |   city    |    type     |  pin   
+--------+-------+------------+-----------+-----------+-------------+--------
+ s      | 45.25 | 2011-05-06 | banglore  |           |             |       
+ winter | 25.25 | 2011-12-18 | Delhi     |           |             |       
+ rainy  | 30.25 | 2011-09-12 | Hyderabad | Hyderabad | metro       | 500008
+        |       |            |           | kakinads  | normal city | 500565
+ spring | 26.25 | 2012-03-09 | varanasi  |           |             |       
+        |       |            |           | Vizag     | 2 tier city | 500025
+(6 rows)
+
+
+postgres=# delete from cities where city='kakinada';
+DELETE 0
+postgres=# select * from cities;
+   city    |    type     |  pin   
+-----------+-------------+--------
+ Vizag     | 2 tier city | 500025
+ kakinads  | normal city | 500565
+ Hyderabad | metro       | 500008
+(3 rows)
+
+postgres=# delete from cities where city='kakinads';
+DELETE 1
+postgres=# select * from cities;
+   city    |    type     |  pin   
+-----------+-------------+--------
+ Vizag     | 2 tier city | 500025
+ Hyderabad | metro       | 500008
+(2 rows)
+
+
+postgres=# create view myview as
+select city,type,season,data,temp from cities,climate where climate.city=cities.city;
+ERROR:  column reference "city" is ambiguous
+LINE 2: select city,type,season,data,temp from cities,climate where ...
+               ^
+postgres=# create view myview as
+select cities.city,type,season,data,temp from cities,climate where climate.city=cities.city;
+CREATE VIEW
+postgres=# select * from myview; 
+   city    | type  | season |    data    | temp  
+-----------+-------+--------+------------+-------
+ Hyderabad | metro | rainy  | 2011-09-12 | 30.25
+(1 row)
+
+postgres=# CREATE TABLE cities (
+postgres(#         city     varchar(80) primary key,
+postgres(#         location point
+postgres(# );
+ERROR:  relation "cities" already exists
+postgres=# CREATE TABLE cities(city varchar(80) primary key,location point);
+ERROR:  relation "cities" already exists
+postgres=# CREATE TABLE town(city varchar(80) primary key,location point);
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "town_pkey" for table "town"
+CREATE TABLE
+
+                                                       ^
+postgres=# \d climate;
+           Table "public.climate"
+ Column |         Type          | Modifiers 
+--------+-----------------------+-----------
+ season | character varying(30) | 
+ temp   | double precision      | 
+ data   | date                  | 
+ city   | character varying(20) | 
+
+postgres=# \d cities;
+           Table "public.cities"
+ Column |         Type          | Modifiers 
+--------+-----------------------+-----------
+ city   | character varying(30) | 
+ type   | character varying(20) | 
+ pin    | integer               | not null
+
+postgres=# alter table cities add c_id varchar(10); 
+ALTER TABLE
+
+postgres=# \d climate;
+           Table "public.climate"
+ Column |         Type          | Modifiers 
+--------+-----------------------+-----------
+ season | character varying(30) | 
+ temp   | double precision      | 
+ data   | date                  | 
+ city   | character varying(20) | 
+
+postgres=# select * from climate;
+ season | temp  |    data    |   city    
+--------+-------+------------+-----------
+ s      | 45.25 | 2011-05-06 | banglore
+ winter | 25.25 | 2011-12-18 | Delhi
+ rainy  | 30.25 | 2011-09-12 | Hyderabad
+ spring | 26.25 | 2012-03-09 | varanasi
+(4 rows)
+
+postgres=# alter table cities add c_id varchar(10); 
+ERROR:  column "c_id" of relation "cities" already exists
+postgres=# select * from cities;
+   city    |    type     |  pin   | c_id 
+-----------+-------------+--------+------
+ Vizag     | 2 tier city | 500025 | 
+ Hyderabad | metro       | 500008 | 
+(2 rows)
+
+postgres=# update cities set c_id=1 where city='hyderabad';
+UPDATE 0
+postgres=# update cities set c_id=1 where city='Hyderabad';
+UPDATE 1
+postgres=# update cities set c_id=2where city='Vizag';
+UPDATE 1
+postgres=# select * from cities;
+   city    |    type     |  pin   | c_id 
+-----------+-------------+--------+------
+ Hyderabad | metro       | 500008 | 1
+ Vizag     | 2 tier city | 500025 | 2
+(2 rows)
+
+postgres=# alter table cities add primary key (c_id);
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "cities_pkey" for table "cities"
+ALTER TABLE
+
+postgres=# alter table climate add city_id varchar(10);
+ALTER TABLE
+postgres=# alter table climate add primary key(city_id);
+ERROR:  column "city_id" contains null values
+postgres=# update climate set city_id=1 where season='s';
+UPDATE 1
+postgres=# update climate set city_id=2 where season='winter';
+UPDATE 1
+postgres=# update climate set city_id=3 where season='rainy';
+UPDATE 1
+postgres=# update climate set city_id=4 where season='spring';
+UPDATE 1
+postgres=# select * from climate;
+ season | temp  |    data    |   city    | city_id 
+--------+-------+------------+-----------+---------
+ s      | 45.25 | 2011-05-06 | banglore  | 1
+ winter | 25.25 | 2011-12-18 | Delhi     | 2
+ rainy  | 30.25 | 2011-09-12 | Hyderabad | 3
+ spring | 26.25 | 2012-03-09 | varanasi  | 4
+(4 rows)
+
+                                   ^
+postgres=# insert into cities values ('alepy','town',502136,3
+);
+INSERT 0 1
+postgres=# select * from cities;
+   city    |    type     |  pin   | c_id 
+-----------+-------------+--------+------
+ Hyderabad | metro       | 500008 | 1
+ Vizag     | 2 tier city | 500025 | 2
+ alepy     | town        | 502136 | 3
+(3 rows)
+
+postgres=# insert into cities values ('kashmir','city',502136,4
+);
+INSERT 0 1
+postgres=# select * from cities;
+   city    |    type     |  pin   | c_id 
+-----------+-------------+--------+------
+ Hyderabad | metro       | 500008 | 1
+ Vizag     | 2 tier city | 500025 | 2
+ alepy     | town        | 502136 | 3
+ kashmir   | city        | 502136 | 4
+(4 rows)
+
+postgres=# alter table climate add foreign key (city_id) references cities(c_id);
+ALTER TABLE
+
+postgres=# create table first(name varchar(20),id int primary key);
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "first_pkey" for table "first"
+CREATE TABLE
+postgres=# insert into first values('sriram',1);
+INSERT 0 1
+postgres=# insert into first values('sree',2);
+INSERT 0 1
+postgres=# insert into first values('cena',3);
+INSERT 0 1
+postgres=# insert into first values('randy orton',4);
+INSERT 0 1
+postgres=# insert into first values('edge',5);
+INSERT 0 1
+postgres=# insert into first values('trilpe h',6);
+INSERT 0 1
+postgres=# select * from first
+postgres-# ;
+    name     | id 
+-------------+----
+ sriram      |  1
+ sree        |  2
+ cena        |  3
+ randy orton |  4
+ edge        |  5
+ trilpe h    |  6
+(6 rows)
+
+postgres=# alter table first add primary key(id);
+ERROR:  multiple primary keys for table "first" are not allowed
+postgres=# \d first;
+            Table "public.first"
+ Column |         Type          | Modifiers 
+--------+-----------------------+-----------
+ name   | character varying(20) | 
+ id     | integer               | not null
+Indexes:
+    "first_pkey" PRIMARY KEY, btree (id)
+
+postgres=# drop table first;
+DROP TABLE
+
+postgres=# CREATE TABLE orders (
+postgres(#     order_id integer PRIMARY KEY,
+postgres(#     shipping_address text,
+postgres(#     ...
+postgres(# );
+
+postgres=# CREATE TABLE orders (
+    order_id integer PRIMARY KEY,
+    shipping_address text);
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "orders_pkey" for table "orders"
+CREATE TABLE
+postgres=# CREATE TABLE order_items (
+postgres(#     product_no integer REFERENCES products ON DELETE RESTRICT,
+postgres(#     order_id integer REFERENCES orders ON DELETE CASCADE,
+postgres(#     quantity integer,
+postgres(#     PRIMARY KEY (product_no, order_id)
+postgres(# );
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "order_items_pkey" for table "order_items"
+ERROR:  relation "products" does not exist
+postgres=# CREATE TABLE order_items (
+    product_no integer REFERENCES products ON DELETE RESTRICT,
+    order_id integer REFERENCES orders ON DELETE CASCADE,
+    quantity integer,
+    PRIMARY KEY (product_no, order_id)
+);
+
+postgres=# create table attandance(id int not null primary key,name varchar(20));
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "attandance_pkey" for table "attandance"
+CREATE TABLE
+postgres=# insert into attandance 
+DEFAULT VALUES  SELECT          TABLE           VALUES          
+postgres=# insert into attandance 
+DEFAULT VALUES  SELECT          TABLE           VALUES          
+postgres=# insert into attandance values(1,'sriram');
+INSERT 0 1
+postgres=# drop table attandance(restrict);
+ERROR:  syntax error at or near "("
+LINE 1: drop table attandance(restrict);
+                             ^
+postgres=# select * from attandance;
+ id |  name  
+----+--------
+  1 | sriram
+(1 row)
+

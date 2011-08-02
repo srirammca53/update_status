@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/public/images"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   committed-rev="3044"
+   name="loading.gif"
+   text-time="2006-08-18T17:08:41.000000Z"
+   committed-date="2006-08-18T18:31:13.602971Z"
+   checksum="c1f911de6f004fbaa2099ac2a61040af"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T18:30:51.000000Z"
+   revision="3044"/>
+<entry
+   committed-rev="3046"
+   name="delete.png"
+   text-time="2006-03-13T02:52:10.000000Z"
+   committed-date="2006-08-19T20:16:17.867338Z"
+   checksum="68461ca5187cd2c6af08786467085f2b"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-19T20:16:09.000000Z"
+   revision="3046"/>
+<entry
+   committed-rev="3048"
+   name="arrow_left.png"
+   text-time="2006-03-13T02:48:46.000000Z"
+   committed-date="2006-08-19T23:09:57.356791Z"
+   checksum="5050c8e897cec907d6319f397a66c474"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-19T23:09:41.000000Z"
+   revision="3048"/>
+<entry
+   committed-rev="3048"
+   name="arrow_right.png"
+   text-time="2006-03-13T02:48:50.000000Z"
+   committed-date="2006-08-19T23:09:57.356791Z"
+   checksum="46faba03ba3a35d750b5b758cc3d5d2c"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-19T23:09:45.000000Z"
+   revision="3048"/>
+<entry
+   committed-rev="3046"
+   name="add.png"
+   text-time="2006-03-13T02:48:16.000000Z"
+   committed-date="2006-08-19T20:16:17.867338Z"
+   checksum="1988c3cc1384a3ac9b9a4129183248f3"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-19T20:16:12.000000Z"
+   revision="3046"/>
+<entry
+   committed-rev="3039"
+   name="rails.png"
+   text-time="2006-08-18T02:05:02.000000Z"
+   committed-date="2006-08-18T02:04:29.308454Z"
+   checksum="450fc241fab7867e96536903244087f4"
+   last-author="scottr"
+   kind="file"
+   prop-time="2006-08-18T02:05:02.000000Z"/>
+</wc-entries>

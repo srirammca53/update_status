@@ -1,0 +1,15 @@
+<div id="form_container" <% if @edit_on %>class="active"<% end %>>
+  <div id="cancel_link"><%= link_to_function "Cancel", "PostForm.toggle()", :class => 'delete small' %></div>
+  <div id="new_link"><% if can_edit? @post %><span>&nbsp;&nbsp;</span><%= link_to_function "Edit", "PostForm.toggle()", :class => 'create' %><% end %></div>
+	<div id="meta">Posted <%= distance_of_time_in_words_to_now(@post.created_at) %> ago by <%= link_to @post.creator.name, user_url(:id => @post.creator), { 'class' => 'grey' } %></div>
+	<%= render :partial => 'form' %>
+	<div id="detail">
+		<p><strong>First call:</strong> <%= @post.start_date %></p>
+		<p><strong>Last call:</strong> <%= @post.end_date %> (<%= time_ago_in_words @post.end_date %> ago)</p>
+		<% unless @post.phone.blank? %><p><strong>Phone:</strong> <%= @post.phone %></p><% end %>
+		<% unless @post.email.blank? %><p><strong>Email:</strong> <%= mail_to @post.email %></p><% end %>
+		<%= simple_format @post.body %>
+	</div>
+</div>
+
+<%= render :partial => "comments/comments", :comments => @post.comments %>

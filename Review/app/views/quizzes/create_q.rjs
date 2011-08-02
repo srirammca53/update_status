@@ -1,0 +1,7 @@
+page.insert_html :bottom, :quiz, render(:partial => "edit_question", :locals => { :question => @question })
+page["question_#{@question.id}"].visual_effect :highlight
+page.sortable :quiz, :url => reorder_quiz_url
+page[:question_question].value = ''
+page[:question_answer].value = ''
+page[:question_question].focus
+page.quiz.update_hints

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3039"
+   name=""
+   committed-date="2006-08-18T02:04:29.308454Z"
+   url="http://redgreenblu.com/svn/work/gallery/public/stylesheets"
+   last-author="scottr"
+   kind="dir"
+   uuid="fe2b423c-c2ee-0310-810c-3d5c03d11cad"
+   repos="http://redgreenblu.com/svn/work"
+   revision="3041"/>
+<entry
+   committed-rev="3048"
+   name="application.css"
+   text-time="2006-08-19T23:08:46.000000Z"
+   committed-date="2006-08-19T23:09:57.356791Z"
+   checksum="4b92ab5cfba3ea515e25bda73981b606"
+   last-author="scottr"
+   kind="file"
+   revision="3048"/>
+</wc-entries>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  empname: MyString
+  empdepartment: MyString
+  date: 2011-07-14
+  present: MyString
+  late: MyString
+  absent: MyString
+
+two:
+  empname: MyString
+  empdepartment: MyString
+  date: 2011-07-14
+  present: MyString
+  late: MyString
+  absent: MyString

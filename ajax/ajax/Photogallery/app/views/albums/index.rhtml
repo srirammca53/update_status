@@ -1,0 +1,17 @@
+<% if logged_in? %>
+  <% form_for :album, Album.new, :url => albums_url, :html => { :id => "album_create" } do |f| %>
+    <%= image_tag "add", :class => 'icon' %> <%= f.text_field :name %> <%= submit_tag "Create" %>
+  <% end %>
+<% end %>
+
+<% if @albums.any? %>
+  <ul id="albums">
+    <% @albums.each do |album| %>
+      <li>
+        <%= link_to image_tag(thumb_photo_url(:album_id => album, :id => album.photos.first), :class => "thumb", :alt => ""), album_url(:id => album) %><br/>
+        <%= link_to album.name, album_url(:id => album) %> <% if logged_in? %><%= link_to image_tag("delete", :class => 'icon'), album_url(:id => album), :method => :delete %><% end %><br/>
+        <%= pluralize album.photos_count, 'photo' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

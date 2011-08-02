@@ -1,0 +1,33 @@
+<center>
+<p id="notice"><%= notice %></p>
+
+<table border=1px>
+<tr>
+  <td>EmpName:</td>
+  <td><%= @emp.empname %></td>
+</tr>
+<tr>
+  <td><b>EmpDepartment:</b></td>
+  <td><%= @emp.empdepartment %></td>
+</tr>
+<tr>
+  <td><b>Date:</b></td>
+  <td><%= @emp.date %></td>
+</tr>
+
+<tr>
+  <td><b>present:</b>
+  <td><%= @emp.present %></td>
+</tr>
+<tr>
+  <td><b> late:</b></td>
+  <td><%= @emp.late %></td>
+</tr>
+<tr>
+  <td><b> absent:</b></td>
+  <td><%= @emp.absent %></td>
+</tr>
+</table>
+<%= link_to 'Edit', edit_emp_path(@emp) %> |
+<%= link_to 'Back', emps_path %>
+</center>
